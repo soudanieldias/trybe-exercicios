@@ -35,3 +35,6 @@ h1 {
   h3 {
       text-align: center;
   }
+  li {
+      display: inline-block;
+  }
