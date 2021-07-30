@@ -1,11 +1,8 @@
-let numeros = [1,2,3,4,5];
-for(let number of numeros) {
-  console.log(number);
-}
+//Utilize o for/of para imprimir os elementos da lista names com o console.log()
 
-// resultado: 
-//1
-//2
-//3
-//4
-//5
+let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+
+for (nome of names)
+{
+    console.log(nome);
+}
