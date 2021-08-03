@@ -7,13 +7,6 @@ Crie uma função que receba um array de inteiros e retorne o índice do maior v
 
 let arrayTeste = [2, 3, 6, 7, 10, 1];
 
-// for (number in arrayTeste)
-// {
-//   let maiorNumero = 0;
-
-//   let posicaoMaiorNumero = arrayTeste[number];
-//   console.log("Maior Número: " + maiorNumero);
-// }
 let maiorNumero = null;
 let posicaomaiorNumero = null;
 
