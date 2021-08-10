@@ -26,3 +26,7 @@ corDoChild[0].style.backgroundColor = "white";
 // Crie uma função que corrija o texto da tag <h1>.
 const corrigeTexto = document.getElementsByClassName("title");
 corrigeTexto[0].textContent = "Exercício 5.1 - JavaScript";
+
+// Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+const alteraMaiusculo = document.getElementsByTagName("p");
+alteraMaiusculo[0].innerHTML = alteraMaiusculo[0].innerHTML.toUpperCase();
