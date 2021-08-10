@@ -12,7 +12,6 @@ Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 */
 
 // Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
-
 const tagP = document.getElementsByTagName("p");
 tagP[0].textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius magna enim, sit amet vulputate. ";
 
@@ -23,3 +22,7 @@ corDoMain[0].style.backgroundColor = "rgb(76,164,109)";
 // Crie uma função que mude a cor do quadrado vermelho para branco.
 const corDoChild = document.getElementsByClassName("center-content");
 corDoChild[0].style.backgroundColor = "white";
+
+// Crie uma função que corrija o texto da tag <h1>.
+const corrigeTexto = document.getElementsByClassName("title");
+corrigeTexto[0].textContent = "Exercício 5.1 - JavaScript";
