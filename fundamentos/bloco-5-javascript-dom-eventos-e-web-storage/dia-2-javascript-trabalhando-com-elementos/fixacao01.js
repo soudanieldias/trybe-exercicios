@@ -30,8 +30,9 @@ let primeiroFilhoDoPai = elementoPai.firstChild;
 let primeiroFilhoAtualElemento = elementoOndeEstou.firstChild;
 // console.log(primeiroFilhoAtualElemento);
 
-
-
+// Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+let textoAtencao = elementoOndeEstou.parentNode.childNodes;
+console.log(textoAtencao[4]);
 
 
 
