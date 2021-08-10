@@ -11,4 +11,22 @@
 // Acesse o elemento elementoOndeVoceEsta.
 let elementoOndeEstou = document.getElementById("elementoOndeVoceEsta");
 console.log(elementoOndeEstou); // Acessa elementoOndeVoceEsta
-// console.log(elementoOndeEstou.innerHTML); // Acessa conteúdo de elementoOndeVoceEsta
+// console.log(elementoOndeEstou.innerHTML); // Acessa conteúdo de elementoOndeVoceEsta como HTML
+
+// Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+let elementoPai = elementoOndeEstou.parentElement;
+// console.log(elementoPai); // Acessa elemento Pai
+elementoPai.style.color = "red";
+
+
+
+
+
+
+
+
+
+
+
+
+
