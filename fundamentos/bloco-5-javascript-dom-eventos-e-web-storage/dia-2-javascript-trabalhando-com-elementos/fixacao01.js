@@ -22,8 +22,9 @@ elementoPai.style.color = "red";
 let primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho").textContent += "Adicionando um Texto ao Primeiro Filho do Filho";
 // console.log(primeiroFilhoDoFilho); // Acessa primeiroFilho do elementoOndeEstou
 
-
-
+// Acesse o primeiroFilho a partir de pai.
+let primeiroFilhoDoPai = elementoPai.firstChild;
+console.log("Primogênito do Pai: " + primeiroFilhoDoPai);
 
 
 
