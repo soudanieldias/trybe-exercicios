@@ -24,17 +24,20 @@ let primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho").textC
 
 // Acesse o primeiroFilho a partir de pai.
 let primeiroFilhoDoPai = elementoPai.firstChild;
-// console.log("Primogênito do Pai: " + primeiroFilhoDoPai);
+// console.log("Primogênito do Pai: " + primeiroFilhoDoPai); // [DEBUG]
 
 // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
 let primeiroFilhoAtualElemento = elementoOndeEstou.firstChild;
-// console.log(primeiroFilhoAtualElemento);
+// console.log(primeiroFilhoAtualElemento); // [DEBUG]
 
 // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
 let textoAtencao = elementoOndeEstou.parentNode.childNodes;
-// console.log(textoAtencao[4]);
+// console.log(textoAtencao[4]); // [DEBUG]
 
 // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
 let terceiroFilho = elementoOndeEstou.childNodes;
-console.log(terceiroFilho[2]);
+// console.log(terceiroFilho[2]); // [DEBUG]
 
+// Agora acesse o terceiroFilho a partir de pai.
+terceiroFilhoDoPai = elementoPai.childNodes;
+console.log(terceiroFilhoDoPai[2]);
