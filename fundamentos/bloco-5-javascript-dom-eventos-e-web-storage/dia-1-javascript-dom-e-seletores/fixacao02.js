@@ -14,3 +14,11 @@ console.log(conteudoParagrafos);
 const paragrafo1 = document.getElementsByClassName("paragrafos")[0];
 
 paragrafo1.style.fontFamily = "Arial";
+
+var h4Elements = document.getElementsByTagName('h4');
+
+h4Elements[0].style.color = 'green';
+
+// for (var i = 0; i < h4Elements.length; i++) {
+//     h4Elements[i].style.color = 'green';
+// }
