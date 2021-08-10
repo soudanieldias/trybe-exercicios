@@ -15,3 +15,7 @@ Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 
 const tagP = document.getElementsByTagName("p");
 tagP[0].textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius magna enim, sit amet vulputate. ";
+
+// Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+const corDoMain = document.getElementsByClassName("main-content");
+corDoMain[0].style.backgroundColor = "rgb(76,164,109)";
