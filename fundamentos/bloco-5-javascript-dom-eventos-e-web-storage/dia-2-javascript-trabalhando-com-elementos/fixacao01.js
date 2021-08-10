@@ -40,4 +40,4 @@ let terceiroFilho = elementoOndeEstou.childNodes;
 
 // Agora acesse o terceiroFilho a partir de pai.
 terceiroFilhoDoPai = elementoPai.childNodes;
-console.log(terceiroFilhoDoPai[2]);
+// console.log(terceiroFilhoDoPai[2]);
