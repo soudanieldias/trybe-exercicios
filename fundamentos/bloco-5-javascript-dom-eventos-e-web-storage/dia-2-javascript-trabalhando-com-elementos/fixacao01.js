@@ -24,9 +24,11 @@ let primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho").textC
 
 // Acesse o primeiroFilho a partir de pai.
 let primeiroFilhoDoPai = elementoPai.firstChild;
-console.log("Primogênito do Pai: " + primeiroFilhoDoPai);
+// console.log("Primogênito do Pai: " + primeiroFilhoDoPai);
 
-
+// Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+let primeiroFilhoAtualElemento = elementoOndeEstou.firstChild;
+// console.log(primeiroFilhoAtualElemento);
 
 
 
