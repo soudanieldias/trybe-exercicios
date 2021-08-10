@@ -19,9 +19,8 @@ let elementoPai = elementoOndeEstou.parentElement;
 elementoPai.style.color = "red";
 
 // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
-let primeirofilhoDoFilho = elementoOndeEstou.firstChild;
-// console.log(primeiroFilho); // Acessa primeiroFilho do elementoOndeEstou
-primeirofilhoDoFilho.textContent = "Adicionando um Texto ao Primeiro Filho do Filho";
+let primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho").textContent += "Adicionando um Texto ao Primeiro Filho do Filho";
+// console.log(primeiroFilhoDoFilho); // Acessa primeiroFilho do elementoOndeEstou
 
 
 
