@@ -29,7 +29,10 @@ corrigeTexto[0].textContent = "Exercício 5.1 - JavaScript";
 
 // Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
 const alteraMaiusculo = document.getElementsByTagName("p");
-alteraMaiusculo[0].innerHTML = alteraMaiusculo[0].innerHTML.toUpperCase();
+for (index = 0; index < alteraMaiusculo.length; index += 1) {
+    alteraMaiusculo[index].innerHTML = alteraMaiusculo[index].innerHTML.toUpperCase();
+}
+// alteraMaiusculo[0].innerHTML = alteraMaiusculo[0].innerHTML.toUpperCase(); // ORIGINAL
 
 // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 const paragrafos = document.getElementsByTagName('p');
