@@ -10,7 +10,7 @@
 
 // Acesse o elemento elementoOndeVoceEsta.
 let elementoOndeEstou = document.getElementById("elementoOndeVoceEsta");
-console.log(elementoOndeEstou); // Acessa elementoOndeVoceEsta
+// console.log(elementoOndeEstou); // Acessa elementoOndeVoceEsta
 // console.log(elementoOndeEstou.innerHTML); // Acessa conteúdo de elementoOndeVoceEsta como HTML
 
 // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
@@ -32,7 +32,9 @@ let primeiroFilhoAtualElemento = elementoOndeEstou.firstChild;
 
 // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
 let textoAtencao = elementoOndeEstou.parentNode.childNodes;
-console.log(textoAtencao[4]);
+// console.log(textoAtencao[4]);
 
-
+// Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+let terceiroFilho = elementoOndeEstou.childNodes;
+console.log(terceiroFilho[2]);
 
