@@ -18,8 +18,14 @@
 // Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
 
 // PARTE 01:
-// Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
 
+// Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
 const elementoH1 = document.createElement('h1');
 elementoH1.innerText = "Exercício 5.2 - JavaScript DOM";
 document.body.appendChild(elementoH1);
+
+// Adicione a tag main com a classe main-content como filho da tag body;
+const elementoMain = document.createElement('main');
+elementoMain.className = "main-content";
+elementoMain.innerText = "main-content///Filho da Body";
+document.body.appendChild(elementoMain);
