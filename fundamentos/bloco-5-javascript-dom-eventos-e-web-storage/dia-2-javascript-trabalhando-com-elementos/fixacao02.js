@@ -16,7 +16,10 @@ console.log("Elemento Irmão: " + elementoIrmao.textContent);
 elementoPai.appendChild(elementoIrmao); // Adiciona elementoIrmao ao final da Section do elementoPai
 
 // Crie um filho para elementoOndeVoceEsta.
-
+let elementoFilhoDeOndeEstou = document.createElement("section");
+elementoFilhoDeOndeEstou.textContent = "Testando elementoFIlhoDeOndeEstou";
+elementoFilhoDeOndeEstou.id = "filhoDeOndeEstou";
+elementoOndeEstou.appendChild(elementoFilhoDeOndeEstou);
 
 // Crie um filho para primeiroFilhoDoFilho.
 
