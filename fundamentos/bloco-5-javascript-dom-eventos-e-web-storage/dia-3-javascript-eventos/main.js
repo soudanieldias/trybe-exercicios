@@ -40,3 +40,12 @@ function mudaClasseTech(event) {
 firstLi.addEventListener('click', mudaClasseTech);
 secondLi.addEventListener('click', mudaClasseTech);
 thirdLi.addEventListener('click', mudaClasseTech);
+
+// 2. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento com a classe 'tech';
+
+function escreveClasseTech(event) {
+    const elementoTech = document.querySelector('.tech');
+    elementoTech.innerText = event.target.value;
+}
+input.addEventListener('change', escreveClasseTech);
+
