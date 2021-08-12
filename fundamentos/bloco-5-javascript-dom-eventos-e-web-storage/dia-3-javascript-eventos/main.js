@@ -49,3 +49,12 @@ function escreveClasseTech(event) {
 }
 input.addEventListener('change', escreveClasseTech);
 
+// 3. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele redirecione para alguma página;
+//    1. Que tal redirecionar para seu portifólio?
+
+
+function funcaoRedirect() {
+    window.location.href = "http://soudanieldias.github.io";
+}
+
+myWebpage.addEventListener('dblclick', funcaoRedirect);
