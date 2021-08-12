@@ -95,8 +95,8 @@ for  (let index = 0; index < elementosH3.length; index += 1) {
 }
 
 // Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
-
-
+let elementoARemover = document.getElementsByClassName("left-content")[0];
+elementoMain.removeChild(elementoARemover);
 
 // Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
 
