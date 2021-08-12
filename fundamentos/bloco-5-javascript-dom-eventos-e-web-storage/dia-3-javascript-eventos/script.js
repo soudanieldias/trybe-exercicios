@@ -28,11 +28,20 @@ function createDaysOfTheWeek() {
 
     for (let index = 0; index < dezDaysList.length; index +=1) {
       let diaInput = dezDaysList[index];
+
       // ESTRUTURA DEFAULT PARA INJETAR DIA DO ARRAY NA LISTA days
       // let elementoDia = document.createElement('li');
       // elementoDia.className = 'day';
       // elementoDia.innerHTML = diaInput;
       // listaDosDias.appendChild(elementoDia);
+
+      // Os dias 24, 25 e 31 são feriados e, além da classe day , devem conter também a classe holiday
+      if (diaInput === 24 || diaInput === 25 || diaInput === 31) {
+        let elementoDia = document.createElement('li');
+        elementoDia.className = 'day holiday';
+        elementoDia.innerHTML = diaInput;
+        listaDosDias.appendChild(elementoDia);
+      }
     };
   };
   criaDiasDoMes();
