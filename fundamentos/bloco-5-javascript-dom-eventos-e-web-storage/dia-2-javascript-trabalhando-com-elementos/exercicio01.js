@@ -31,11 +31,15 @@ elementoMain.innerText = "main-content///Filho da Body";
 document.body.appendChild(elementoMain);
 
 // Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
-
-
+const tagSectionCenter = document.createElement('section');
+tagSectionCenter.className = "center-content";
+tagSectionCenter.innerText = "section///center-content";
+elementoMain.appendChild(tagSectionCenter);
 
 // Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
-
+const tagP = document.createElement('p');
+tagP.textContent = "Texto da tagP";
+tagSectionCenter.appendChild(tagP);
 
 
 // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
