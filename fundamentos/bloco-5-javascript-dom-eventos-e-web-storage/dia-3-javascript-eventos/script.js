@@ -41,7 +41,22 @@ function createDaysOfTheWeek() {
         elementoDia.className = 'day holiday';
         elementoDia.innerHTML = diaInput;
         listaDosDias.appendChild(elementoDia);
+
+        // Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a classe friday .
+      } else if (diaInput === 4 || diaInput === 11 || diaInput === 18 || diaInput === 25) {
+        
+        let elementoDia = document.createElement('li');
+        elementoDia.className = 'day friday';
+        elementoDia.innerHTML = diaInput;
+        listaDosDias.appendChild(elementoDia);
+      } else {
+        let elementoDia = document.createElement('li');
+        elementoDia.className = 'day';
+        elementoDia.innerHTML = diaInput;
+        listaDosDias.appendChild(elementoDia);
       }
     };
   };
   criaDiasDoMes();
+
+  
