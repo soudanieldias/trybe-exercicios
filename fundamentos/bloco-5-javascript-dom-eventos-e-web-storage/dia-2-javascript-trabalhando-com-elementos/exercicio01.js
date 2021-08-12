@@ -84,10 +84,15 @@ for (let index = 1; index <= 3; index += 1) {
 // Adicione a classe title na tag h1 criada;
 elementoH1.className = "title";
 
-
 // Adicione a classe description nas 3 tags h3 criadas;
-
-
+const elementosH3 = document.getElementsByTagName('h3');
+// console.log(elementosH3[0]);
+// console.log(elementosH3[1]);
+// console.log(elementosH3[2]);
+// console.log(elementosH3.length);
+for  (let index = 0; index < elementosH3.length; index += 1) {
+    elementosH3[index].className = "description";
+}
 
 // Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
 
