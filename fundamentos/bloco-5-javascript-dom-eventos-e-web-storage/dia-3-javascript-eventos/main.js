@@ -58,3 +58,11 @@ function funcaoRedirect() {
 }
 
 myWebpage.addEventListener('dblclick', funcaoRedirect);
+
+// 4. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere a cor do mesmo;
+
+function mudaCor(event) {
+    event.target.style.color = 'red';
+}
+
+myWebpage.addEventListener('mouseout', mudaCor);
