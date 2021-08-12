@@ -107,5 +107,9 @@ tagSectionRight.style.marginRight = "auto";
 tagSectionCenter.style.backgroundColor = "green";
 
 // Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
-
+// tagSectionRight.ul.lastChild.remove();
+// const elementosDaUl = document.querySelectorAll('li');
+// console.log(elementosDaUl);
+ulList.lastChild.remove();
+ulList.lastChild.remove();
 
