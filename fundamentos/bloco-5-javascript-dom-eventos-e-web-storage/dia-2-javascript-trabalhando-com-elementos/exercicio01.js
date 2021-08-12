@@ -99,7 +99,9 @@ let elementoARemover = document.getElementsByClassName("left-content")[0];
 elementoMain.removeChild(elementoARemover);
 
 // Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
-
+// let elementoAMover = document.getElementsByClassName("right-content")[0];
+// elementoAMover.style.marginRight = "auto";
+tagSectionRight.style.marginRight = "auto";
 
 
 // Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
