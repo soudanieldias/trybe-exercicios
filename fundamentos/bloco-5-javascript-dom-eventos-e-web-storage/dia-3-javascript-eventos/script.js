@@ -43,7 +43,7 @@ function createDaysOfTheWeek() {
         listaDosDias.appendChild(elementoDia);
 
         // Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a classe friday .
-      } else if (diaInput === 4 || diaInput === 11 || diaInput === 18 || diaInput === 25) {
+      } else if (diaInput === 4 || diaInput === 11 || diaInput === 18) {
         
         let elementoDia = document.createElement('li');
         elementoDia.className = 'day friday';
@@ -148,15 +148,24 @@ itsFriday("Sexta-feira");
 // o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 // Dica - Propriedade: event.target.
 
-  function zoomDiaMes() {
+  function zoomInDiaMes() {
     let elementoDia = document.querySelector("#days");
     elementoDia.addEventListener('mouseover', function(event) {
       event.target.style.fontSize = '30px';
       event.target.style.fontWeight = '600';
     })
-    elementoDia.addEventListener('mousein', function(event) {
+    elementoDia.addEventListener('mouseout', function(event) {
       event.target.style.fontSize = '20px';
       event.target.style.fontWeight = '200';
     })
   };
-  zoomDiaMes();
+  zoomInDiaMes();
+
+  // function zoomOutDiaMes () {
+    // let elementoDia = document.querySelector("#days");
+    // elementoDia.addEventListener('mouseout', function(event) {
+    //   event.target.style.fontSize = '20px';
+    //   event.target.style.fontWeight = '200';
+    // })
+  // }
+  // zoomOutDiaMes();
