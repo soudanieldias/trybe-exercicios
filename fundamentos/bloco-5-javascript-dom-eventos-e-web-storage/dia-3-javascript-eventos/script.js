@@ -124,23 +124,39 @@ itsFriday("Sexta-feira");
 // 05. Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 // É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 
-function showFriday (arraySexta) {
-  let botaoFriday = document.querySelector('#btn-friday');
-  let sextaCalendario = document.getElementsByClassName('friday');
-  let novoTextoFriday = "SEXTOU!!!";
+  function showFriday (arraySexta) {
+    let botaoFriday = document.querySelector('#btn-friday');
+    let sextaCalendario = document.getElementsByClassName('friday');
+    let novoTextoFriday = "SEXTOU!!!";
 
-  botaoFriday.addEventListener('click', function() {
+    botaoFriday.addEventListener('click', function() {
 
-    for (let index = 0; index < sextaCalendario.length; index += 1) {
-      
-      if (sextaCalendario[index].innerHTML !== novoTextoFriday) {
-        sextaCalendario[index].innerHTML = novoTextoFriday;
-      } else {
-        sextaCalendario[index].innerHTML = arraySexta[index];
+      for (let index = 0; index < sextaCalendario.length; index += 1) {
+        
+        if (sextaCalendario[index].innerHTML !== novoTextoFriday) {
+          sextaCalendario[index].innerHTML = novoTextoFriday;
+        } else {
+          sextaCalendario[index].innerHTML = arraySexta[index];
+        }
       }
-    }
-  });
-};
-let dezFridays = [ 4, 11, 18, 25 ];
-showFriday(dezFridays);
+    });
+  };
+  let dezFridays = [ 4, 11, 18, 25 ];
+  showFriday(dezFridays);
 
+// Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário,
+// o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+// Dica - Propriedade: event.target.
+
+  function zoomDiaMes() {
+    let elementoDia = document.querySelector("#days");
+    elementoDia.addEventListener('mouseover', function(event) {
+      event.target.style.fontSize = '30px';
+      event.target.style.fontWeight = '600';
+    })
+    elementoDia.addEventListener('mousein', function(event) {
+      event.target.style.fontSize = '20px';
+      event.target.style.fontWeight = '200';
+    })
+  };
+  zoomDiaMes();
