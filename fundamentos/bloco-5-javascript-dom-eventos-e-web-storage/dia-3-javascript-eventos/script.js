@@ -107,7 +107,7 @@ function createDaysOfTheWeek() {
   function itsFriday (stringButton) {
     let buttonContainer = document.querySelector('.buttons-container');
     let botaoFriday = document.createElement('button');
-    let idBotao = "btn-holiday";
+    let idBotao = "btn-friday";
 
     botaoFriday.id = idBotao;
     botaoFriday.innerHTML = stringButton;
@@ -115,3 +115,23 @@ function createDaysOfTheWeek() {
 
   };
 itsFriday("Sexta-feira");
+
+function showFriday (arraySexta) {
+  let botaoFriday = document.querySelector('#btn-friday');
+  let sextaCalendario = document.getElementsByClassName('friday');
+  let novoTextoFriday = "SEXTOU!!!";
+
+  botaoFriday.addEventListener('click', function() {
+
+    for (let index = 0; index < sextaCalendario.length; index += 1) {
+      
+      if (sextaCalendario[index].innerHTML !== novoTextoFriday) {
+        sextaCalendario[index].innerHTML = novoTextoFriday;
+      } else {
+        sextaCalendario[index].innerHTML = arraySexta[index];
+      }
+    }
+  });
+};
+let dezFridays = [ 4, 11, 18, 25 ];
+showFriday(dezFridays);
