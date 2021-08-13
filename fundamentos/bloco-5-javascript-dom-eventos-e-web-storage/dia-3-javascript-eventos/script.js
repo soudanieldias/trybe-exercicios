@@ -36,7 +36,7 @@ function createDaysOfTheWeek() {
       // listaDosDias.appendChild(elementoDia);
 
       // Os dias 24, 25 e 31 são feriados e, além da classe day , devem conter também a classe holiday
-      if (diaInput === 24 || diaInput === 25 || diaInput === 31) {
+      if (diaInput === 24 || diaInput === 31) {
         let elementoDia = document.createElement('li');
         elementoDia.className = 'day holiday';
         elementoDia.innerHTML = diaInput;
@@ -47,6 +47,11 @@ function createDaysOfTheWeek() {
         
         let elementoDia = document.createElement('li');
         elementoDia.className = 'day friday';
+        elementoDia.innerHTML = diaInput;
+        listaDosDias.appendChild(elementoDia);
+      } else if (diaInput === 25){
+        let elementoDia = document.createElement('li');
+        elementoDia.className = 'day holiday friday';
         elementoDia.innerHTML = diaInput;
         listaDosDias.appendChild(elementoDia);
       } else {
