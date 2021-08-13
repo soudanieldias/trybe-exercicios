@@ -180,5 +180,22 @@ itsFriday("Sexta-feira");
     let novaTarefa = document.createElement('span');
     novaTarefa.innerText = nomeTarefa;
     listaTarefas.appendChild(novaTarefa);
-  }
+  };
   adicionaTarefa("Cozinhar");
+
+  // 08.  Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior.
+  // Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task.
+  // O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
+  // O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+  function adicionaCor(color) {
+    let listaTarefas = document.querySelector(".my-tasks");
+    let divColorida = document.createElement('div');
+    divColorida.className = "task";
+    divColorida.style.backgroundColor = color;
+    divColorida.innerHTML = " ";
+
+    listaTarefas.appendChild(divColorida);
+
+  };
+  adicionaCor("red");
