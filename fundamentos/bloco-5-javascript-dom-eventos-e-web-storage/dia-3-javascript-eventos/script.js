@@ -79,14 +79,14 @@ function createDaysOfTheWeek() {
   // que muda a cor de fundo dos dias que possuem a classe "holiday".
 
   function mostraFeriados () {
-    let botaoFeriado = document.querySelector("#btn-holiday");
-    let feriadosCalendario = document.querySelectorAll(".holiday");
-    let corAntiga = "rgb(238, 238, 238)";
+    let botaoFeriado = document.querySelector('#btn-holiday');
+    let feriadosCalendario = document.querySelectorAll('.holiday');
+    let corAntiga = "rgb(50, 50, 50)";
     let corNova = "white";
 
-    botaoFeriado.addEventListener('onclick', function() {
+    botaoFeriado.addEventListener('click', function() {
       for (let index = 0; index < feriadosCalendario.length; index += 1) {
-
+        // console.log(feriadosCalendario[index].innerHTML); // DEBUG
         if (feriadosCalendario[index].style.backgroundColor === corNova) {
           feriadosCalendario[index].style.backgroundColor = corAntiga;
 
@@ -97,3 +97,4 @@ function createDaysOfTheWeek() {
       }
     });
   }
+  mostraFeriados();
