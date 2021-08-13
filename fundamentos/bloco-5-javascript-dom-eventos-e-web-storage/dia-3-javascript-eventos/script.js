@@ -64,7 +64,7 @@ function createDaysOfTheWeek() {
   };
   criaDiasDoMes();
 
-// 02 Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
+// 02. Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
 
 //  Adicione a este botão a ID "btn-holiday" .
 //  Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
@@ -80,7 +80,7 @@ function createDaysOfTheWeek() {
   };
   criarBotao("Feriado");
 
-  // Implemente uma função que adicione ao botão "Feriados" um evento de "click"
+  // 03. Implemente uma função que adicione ao botão "Feriados" um evento de "click"
   // que muda a cor de fundo dos dias que possuem a classe "holiday".
 
   function mostraFeriados () {
@@ -104,7 +104,7 @@ function createDaysOfTheWeek() {
   };
   mostraFeriados();
   
-  // Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+  // 04. Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
 
   // Adicione a este botão o ID "btn-friday" .
   // Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
@@ -120,6 +120,9 @@ function createDaysOfTheWeek() {
 
   };
 itsFriday("Sexta-feira");
+
+// 05. Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
+// É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 
 function showFriday (arraySexta) {
   let botaoFriday = document.querySelector('#btn-friday');
@@ -140,3 +143,4 @@ function showFriday (arraySexta) {
 };
 let dezFridays = [ 4, 11, 18, 25 ];
 showFriday(dezFridays);
+
