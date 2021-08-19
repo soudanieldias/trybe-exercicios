@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Currículo</title>
+</head>
+<body>
+
+
+
+    <!--
+        Crie um <fieldset> para os seguintes dados pessoais:
+            Nome - Texto
+                Limite de 40 caracteres
+                Campo obrigatório
+            Email - Texto
+                Limite de 50 caracteres
+                Campo obrigatório
+            CPF - Texto
+                Limite de 11 caracteres
+                Campo obrigatório
+            Endereço - Texto
+                Limite de 200 caracteres
+                Campo obrigatório
+            Cidade - Texto
+                Limite de 28 caracteres
+                Campo obrigatório
+            Estado - Select
+                Todos os estados do Brasil
+                Utilize estruturas de repetição via JavaScript para gerar os <option>
+                Campo obrigatório
+            Tipo - Radio Button
+                Casa, Apartamento
+                Campo obrigatório
+     -->
+
+    <!-- INICIA FORM -->
+    <form action="" method="get">
+        <fieldset name="Dados Pessoais">
+            <!--  -->
+            <legend>Dados Pessoais:</legend>
+            <label for="name">NOME COMPLETO: </label>
+            <input type="text" name="name" id="name" placeholder="Digite seu nome Completo" maxlength="40" required>
+            <br>
+            <label for="email">EMAIL: </label>
+            <input type="email" name="email" id="email"  maxlength="50" autocomplete="off" required>
+            <br>
+            <label for="cpf">CPF: </label>
+            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+            <br>
+            <label for="address">ENDEREÇO: </label>
+            <input type="text" name="address" id="address" maxlength="200" required>
+            <br>
+            <label for="city">CIDADE: </label>
+            <input type="text" name="city" id="city" maxlength="28" required>
+            <label for="state">ESTADO: </label>
+            <select name="state" id="state">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+                <option value="EX">Estrangeiro</option>
+            </select>
+            <br>
+            <label for="typeHouse">Casa</label>
+            <input type="radio" name="type" id="typeHouse">
+            <label for="typeAP">Apartamento</label>
+            <input type="radio" name="type" id="typeAP">
+
+        </fieldset>
+</form>
+</body>
+</html>
