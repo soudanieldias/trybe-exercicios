@@ -9,7 +9,18 @@
 </head>
 <body>
 
-
+    <!-- início do preloader -->
+    <div id="preloader">
+        <div class="inner">
+           <!-- HTML DA ANIMAÇÃO MUITO LOUCA DO SEU PRELOADER! -->
+           <div class="bolas">
+              <div></div>
+              <div></div>
+              <div></div>                    
+           </div>
+        </div>
+    </div>
+    <!-- fim do preloader --> 
 
     <!--
         Crie um <fieldset> para os seguintes dados pessoais:
@@ -95,11 +106,18 @@
                 <br>
                 <label for="initialData">Data de Início: </label>
                 <input type="date" name="initialData" id="initialData">
-                <br>
-                Ao enviar este formulário, você concorda com os nossos <a href="./termosdeuso.html">Termos de Uso</a> e também com a nossa <a href="./politicadeprivacidade.html">Política de Privacidade</a>
             </fieldset>
+            <!--
+                Logo abaixo do formulário, crie um botão que:
+                Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault() . Note que isso vai impedir as validações do HTML ao fazer o submit
+                Implemente, agora, no Javascript , as validações que foram pedidas ao longo da montagem do formulário.
+                Caso todos os dados sejam válidos, monte uma <div> com o consolidado dos dados que foram inseridos no formulário.
+                Caso haja algum dado inválido, mostre em uma <div> uma mensagem de erro. Se o erro for na Data de Início , a mensagem deve ser contextualizada.
+                Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também.
+            -->
+
         </form>
     </div>
-
+<script src="script.js"></script>
 </body>
 </html>
