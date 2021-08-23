@@ -87,11 +87,14 @@
     justify-content: center;
     margin: 10px;
   }
-  
+  /*
+  2.1- Aplique uma base de 350px para seu container aside
+  */
   .aside-container {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    width: 350px;
   }
   
   .aside-container h3, h4 {
