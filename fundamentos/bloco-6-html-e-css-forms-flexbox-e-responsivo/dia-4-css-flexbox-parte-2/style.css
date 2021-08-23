@@ -17,7 +17,7 @@
   .header-container {
     background-color: #5C687C;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
   }
   /*
@@ -38,10 +38,14 @@
     width: 500px;
     flex-grow: 1;
   }
-  
+  /*
+  4- Utilize a propriedade align-self no elemento correto
+  para que o header da página tenha o comportamento.
+  */
   .menu-container ul {
     display: flex;
     justify-content: space-around;
+    align-self: center;
     width: 100%;
   }
   
