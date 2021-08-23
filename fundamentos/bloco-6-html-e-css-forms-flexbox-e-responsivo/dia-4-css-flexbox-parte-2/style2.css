@@ -61,9 +61,13 @@
     display: flex;
     flex-wrap: wrap;
   }
-  
+  /*
+  2.3- Adicione uma propriedade que faça com que seu container de filmes tenha
+  uma base de 700px e outra base de 16% para as div do container de seu card.
+  */
   .movie-container {
     display: flex;
+    width: 700px;
     flex-direction: column;
   }
   
@@ -84,6 +88,7 @@
     border: black solid 1px;
     display: flex;
     height: 150px;
+    width: 16%;
     justify-content: center;
     margin: 10px;
   }
