@@ -90,9 +90,15 @@
   /*
   2.1- Aplique uma base de 350px para seu container aside
   */
+  /*
+  2.2- Aplique um alinhamento para centralizar e outro para expandir.
+  */
   .aside-container {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
     margin: 20px;
     width: 350px;
   }
