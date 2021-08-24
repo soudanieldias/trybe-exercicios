@@ -24,8 +24,11 @@ Realize as seguintes tarefas:
 body {
   font-size: 30px;
 }
+/*
+ 2- Faça o tamanho da fonte dos elementos h1 ser menor;
+*/
 h1 {
-
+  font-size: 25px;
 }
 h2 {
 
