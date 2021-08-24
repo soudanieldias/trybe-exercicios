@@ -92,3 +92,12 @@ body {
       display: block;
     }
   }
+  /*
+  3- A terceira div não deverá aparecer se nossa tela possuir largura entre 650px e 950px.
+  */
+  @media (min-width: 650px) and (max-width: 950px) {
+    .card:nth-child(3)
+    {
+      display: block;
+    }
+  }
