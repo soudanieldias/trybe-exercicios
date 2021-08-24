@@ -73,3 +73,12 @@ body {
   .card:nth-of-type(3) {
     background-color: #41197f;
   }
+  /*
+  1- A primeira div só poderá aparecer se nossa tela possuir largura mínima de 500px.
+  */
+  @media (min-width: 500px) {
+    .card:nth-child(1)
+    {
+      display: block;
+    }
+  }
