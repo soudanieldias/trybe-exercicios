@@ -37,7 +37,9 @@ h2 {
 img {
     max-width: 100%;
 }
-
+/*
+ 3- Aumente o espaçamento entre as figuras;
+*/
 figure {
-    margin: 0;
+    margin: 20px;
 }
