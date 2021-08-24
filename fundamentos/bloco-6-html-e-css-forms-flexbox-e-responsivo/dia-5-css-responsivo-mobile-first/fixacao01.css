@@ -31,12 +31,16 @@ body {
     font-size: 18px;
     font-weight: 300;
   }
-  
-  p.trick {
-    color: white;
-    font-size: 14px;
+  /*
+  4- Sem alterar a classe trick, faça com que o texto dela apareça somente quando a tela estiver com menos de 500px de largura.
+  */
+  @media (min-width: 500px) {
+    p.trick {
+      color: white;
+      font-size: 14px;
+    }
   }
-  
+
   p strong {
     font-weight: 700;
   }
@@ -92,6 +96,7 @@ body {
       display: block;
     }
   }
+
   /*
   3- A terceira div não deverá aparecer se nossa tela possuir largura entre 650px e 950px.
   */
