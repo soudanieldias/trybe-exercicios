@@ -57,8 +57,10 @@ figure {
   - Ajuste as margens da página;
   - Faça as imagens serem mostradas em duas colunas.
 */
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 450px) {
   body {
       background-color: blueviolet;
+      font-size: 18px;
+      margin: 5px;
   }
 }
