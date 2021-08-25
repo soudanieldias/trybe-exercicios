@@ -82,4 +82,18 @@ figure {
  7- Agora, você vai criar outro breakpoint para telas grandes.
  Redimensione sua tela de novo para encontrar um novo breakpoint.
  min-width: 1920px;
+
+ 8- Crie uma nova media query no seu arquivo CSS usando a dimensão que você encontrou para telas grandes (por exemplo 1300px), e realize os seguintes ajustes dentro do breakpoint:
+  - Altere a cor de fundo;
+  - Ajuste o tamanho da fonte;
+  - Ajuste as margens da página;
+  - Adicione a propriedade max-width à página, para garantir que a largura das linhas não fique muito grande.
 */
+@media screen and (min-width: 1920px) {
+
+    /* 8.1- Altere a cor de fundo; */
+    body {
+        background-color: cadetblue;
+    }
+
+}
