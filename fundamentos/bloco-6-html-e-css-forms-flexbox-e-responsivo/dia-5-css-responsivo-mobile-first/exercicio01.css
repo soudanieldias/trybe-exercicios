@@ -93,6 +93,8 @@ figure {
     * {
         /* 8.2- Ajuste o tamanho da fonte; */
         font-size: 30px;
+        /* 8.3- Ajuste as margens da página; */
+        margin: 30px;
     }
     /* 8.1- Altere a cor de fundo; */
     body {
