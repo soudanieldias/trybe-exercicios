@@ -89,7 +89,7 @@ figure {
   - Ajuste as margens da página;
   - Adicione a propriedade max-width à página, para garantir que a largura das linhas não fique muito grande.
 */
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1280px) and (max-width: 1920px) {
     * {
         /* 8.2- Ajuste o tamanho da fonte; */
         font-size: 30px;
