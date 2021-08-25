@@ -78,3 +78,8 @@ figure {
     text-align: center;
   }
 }
+/*
+ 7- Agora, você vai criar outro breakpoint para telas grandes.
+ Redimensione sua tela de novo para encontrar um novo breakpoint.
+ min-width: 1920px;
+*/
