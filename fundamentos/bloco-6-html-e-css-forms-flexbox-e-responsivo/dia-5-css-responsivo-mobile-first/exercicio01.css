@@ -57,10 +57,24 @@ figure {
   - Ajuste as margens da página;
   - Faça as imagens serem mostradas em duas colunas.
 */
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 550px) {
   body {
       background-color: blueviolet;
       font-size: 18px;
       margin: 5px;
+  }
+  main {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+  main img {
+      width: 94px;
+      flex-grow: 1;
+      flex-basis: 100%;
+  }
+  main figure {
+    text-align: center;
   }
 }
