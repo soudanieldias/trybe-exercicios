@@ -1,6 +1,6 @@
-const favoriteLanguage = "Javascript";
-favoriteLanguage = "Python";
-console.log(favoriteLanguage); // Erro
+// const favoriteLanguage = "Javascript";
+// favoriteLanguage = "Python";
+// console.log(favoriteLanguage); // Erro
 
 let favoriteTechnology = "Machine learning";
 favoriteTechnology = "Facial recognition";
