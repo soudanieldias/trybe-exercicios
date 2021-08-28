@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trybe | Tela de Login</title>
+</head>
+<body>
+    <!--
+     Para fixar:
+      Vamos praticar um pouco, criando uma tela de login? 🔥
+       1 - Adicione os campos de entrada para email e senha. OK
+       2 - Adicione um checkbox com o texto Lembre-me. OK
+       3 - Adicione um botão com o texto Entrar. OK
+       4 - Adicione os placeholder Digite seu email e Digite sua senha para os campos de email e senha. OK
+       5 - Adicione o atributo required para os campos de email e senha. OK
+       6 - Adicione o atributo autocomplete="off" para o campo de email. OK
+       7 - Adicione o atributo autofocus para o campo de email. OK
+    -->
+
+    <div id="Tela-login">
+        <form action="" method="GET">
+            <div>
+                <label for="mail"> E-mail:</label>
+                <input type="email" id="mail" placeholder="Digite seu email" required autocomplete="off" autofocus>
+            </div>
+            <div>
+                <label for="pass"> Senha: </label>
+                <input type="password" id="password" placeholder="Digite sua Senha" required >
+            </div>
+            <div>
+                <input type="checkbox" name="remember-me" id="lembrar">
+                <label for="lembrar"> Lembre-me</label>
+            </div>
+            <div>
+                <button type="submit" id="submit-button">Entrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
