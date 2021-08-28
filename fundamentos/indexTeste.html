@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="butao">Butão!</button>
+    <script>
+        window.onload = jsCarregado;
+        elementoEscutado = document.getElementsByClassName('butao')[0];
+        elementoEscutado.addEventListener("click", funcaoClick);
+
+        function funcaoClick(elemento) {
+            console.log("Clickei!!!");
+            console.log(elemento.target);
+            console.log(elemento.type);
+        }
+        function jsCarregado() {
+            alert("Página foi Carregada");
+        }
+        function testeFunction() {
+            alert("a, e, i, o, u.");
+        }
+    </script>
+</body>
+</html>
