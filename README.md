@@ -4,7 +4,7 @@ Repositório de Exercícios e Projetos desenvolvidos por __[mim](https://www.lin
 
 >"O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais."
 
-## Fundamentos do Desenvolvimento Web :heavy_check_mark:
+## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
 ##### Bloco 1: [Unix, Bash e Shell Script](https://github.com/soudanieldias/trybe-exercicios/tree/master/01-fundamentos/bloco-01-unix-bash-e-shell-script)
 - [x] 1.3 - Fundamentos do Desenvolvimento Web
@@ -78,7 +78,7 @@ Repositório de Exercícios e Projetos desenvolvidos por __[mim](https://www.lin
 - [ ] 10.3 - Jest - Simulando comportamentos
 - [ ] 10.4 - Projeto - Jest Assíncrono e Mocking
 
-## Desenvolvimento Front-end :heavy_check_mark:
+## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 11: [Introdução à React](https://github.com/soudanieldias/trybe-exercicios/tree/master/02-front-end/bloco-11-introducao-a-react)
 - [ ] 11.1 - Introdução - Front-end
@@ -113,7 +113,7 @@ Repositório de Exercícios e Projetos desenvolvidos por __[mim](https://www.lin
 - [ ] 16.3 - Usando o Redux no React - Prática
 - [ ] 16.4 - Usando o Redux no React - Actions Assíncronas
 - [ ] 16.5 - Testes síncronos com React-Redux
-- [ ] 16.6 - Projeto - Tabela com filtros de dados
+- [ ] 16.6 - Projeto - Trybe Wallet
 
 ##### Bloco 17: Projeto Jogo de Trivia
 - [ ] 17.1 - Projeto - Jogo de Trivia
