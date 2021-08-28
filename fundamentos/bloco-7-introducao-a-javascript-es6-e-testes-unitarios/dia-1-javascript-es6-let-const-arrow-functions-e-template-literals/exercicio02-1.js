@@ -12,3 +12,10 @@ function calculaFatorial(num) {
     }
 }
 calculaFatorial(10);
+
+let ternaryOperator = function fact(num) {
+  return (num > 1) ? num * ternaryOperator(num - 1) : (1);
+}
+let num = 10;
+console.log(ternaryOperator(num));
+
