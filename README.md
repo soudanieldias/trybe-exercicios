@@ -1,6 +1,6 @@
 # Trybe - Exercícios
 
-Repositório de Exercícios e Projetos desenvolvidos por __[mim](https://www.linkedin.com/in/soudanieldias/)__ durante minha trajetória na [Trybe](https://www.betrybe.com/) :rocket:
+Repositório de Exercícios realizados por __[mim](https://www.linkedin.com/in/soudanieldias/)__ durante meu estudo na [Trybe](https://www.betrybe.com/) :rocket:
 
 >"O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais."
 
