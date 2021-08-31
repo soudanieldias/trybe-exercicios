@@ -64,5 +64,17 @@ let functionAllLessons = allLessons(lesson1, lesson2, lesson3);
 totalAlunos(functionAllLessons);
 
 // 7- Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto.
-let getValueByNumber = (objName, keyPosition) => console.log(Object.keys(lesson1)[keyPosition]);
+let getValueByNumber = (objName, keyPosition) => console.log(Object.keys(objName)[keyPosition]);
 getValueByNumber(lesson1, 3);
+
+/*
+8- Crie uma função que verifique se o par (chave / valor) existe na função.
+ -> Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave.
+*/
+let checkPair = (obj, key, value) => {
+  for (key in obj) {
+    // console.log( Object.entries(key) );
+    console.log(`${key} ${value}`)
+  }
+}
+checkPair(lesson1, 'numeroEstudantes', 30);
