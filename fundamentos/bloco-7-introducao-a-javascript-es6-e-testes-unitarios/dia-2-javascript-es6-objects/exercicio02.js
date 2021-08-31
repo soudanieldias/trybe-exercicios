@@ -46,3 +46,7 @@ console.log(objLenght(lesson1));
 // 4- Crie uma função para listar os valores de um objeto.
 let listValues = objName => `Values do Object: ${Object.values(objName)}`;
 console.log(listValues(lesson3));
+
+// 5- Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign.
+let allLessons = (obj1, obj2, obj3) => Object.assign({}, {obj1}, {obj2}, {obj3});
+console.log(allLessons(lesson1, lesson2, lesson3));
