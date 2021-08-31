@@ -50,3 +50,15 @@ console.log(listValues(lesson3));
 // 5- Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign.
 let allLessons = (obj1, obj2, obj3) => Object.assign({}, {obj1}, {obj2}, {obj3});
 console.log(allLessons(lesson1, lesson2, lesson3));
+
+// 6- Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes em todas as aulas. 
+let totalAlunos = allLessons => {
+    let totalDeAlunos = 0;
+    for (value in allLessons) {
+        totalDeAlunos += allLessons[value].numeroEstudantes;
+        // console.log(`${allLessons[value].numeroEstudantes}`); // [DEBUG]
+    }
+    console.log(`Total de Alunos: ${totalDeAlunos}`);
+};
+let functionAllLessons = allLessons(lesson1, lesson2, lesson3);
+totalAlunos(functionAllLessons);
