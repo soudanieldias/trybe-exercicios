@@ -46,3 +46,10 @@ function listKeys(objName) {
     console.log(keysList);
 }
 listKeys(lesson3);
+
+// 3- Crie uma função para mostrar o tamanho de um objeto.
+function objLenght(objName) {
+    let size = Object.keys(objName).length;
+    console.log(`Tamanho: ${size}`);
+}
+objLenght(lesson1);
