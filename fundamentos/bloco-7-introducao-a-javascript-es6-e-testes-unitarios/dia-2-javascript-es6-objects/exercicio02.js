@@ -39,3 +39,10 @@ function setParams (objName, objKey, keyValue) {
     return lesson2;
   }
 setParams(lesson2, 'turno', 'manhã');
+
+// 2- Crie uma função para listar as keys de um objeto.
+function listKeys(objName) {
+    let keysList = Object.keys(objName);
+    console.log(keysList);
+}
+listKeys(lesson3);
