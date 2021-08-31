@@ -74,7 +74,7 @@ let getValueByNumber = (objName, keyPosition) => console.log(Object.keys(objName
 let checkPair = (obj, key, value) => {
 
   if (key in obj) {
-    // console.log(obj[key]);
+    // console.log(obj[key]); // [DEBUG]
     if (obj[key] === value) {
       console.log(`True`);
     } else {
