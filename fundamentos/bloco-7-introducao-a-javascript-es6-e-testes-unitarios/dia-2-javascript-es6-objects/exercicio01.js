@@ -40,7 +40,11 @@ const order = {
   */
   const customerInfo = (order) => {
     // Adicione abaixo as informações necessárias.
-    console.log (`Olá ${order['delivery'].deliveryPerson}, entrega para: ${order['name']}, Telefone ${order['phoneNumber']}, R. ${order['address'].street}, Nº ${order['address'].number}, AP: ${order['address'].apartment}`);
+    let deliveryValues = Object.values(order['order'].delivery);
+    // console.log("*******"); // [DEBUG]
+    // console.log(deliveryValues); // [DEBUG]
+    // console.log("*******"); // [DEBUG]
+    console.log (`Olá ${deliveryValues[0]}, entrega para: ${order['name']}, Telefone ${order['phoneNumber']}, R. ${order['address'].street}, Nº ${order['address'].number}, AP: ${order['address'].apartment}`);
   }
   
   customerInfo(order);
