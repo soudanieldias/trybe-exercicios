@@ -41,11 +41,8 @@ function setParams (objName, objKey, keyValue) {
 setParams(lesson2, 'turno', 'manhã');
 
 // 2- Crie uma função para listar as keys de um objeto.
-function listKeys(objName) {
-    let keysList = Object.keys(objName);
-    console.log(keysList);
-}
-listKeys(lesson3);
+let listKeys = objName => `Keys do Object: ${Object.keys(objName)}`;
+console.log(listKeys(lesson3));
 
 // 3- Crie uma função para mostrar o tamanho de um objeto.
 let objLenght = objName =>  `Tamanho: ${Object.keys(objName).length}`;
