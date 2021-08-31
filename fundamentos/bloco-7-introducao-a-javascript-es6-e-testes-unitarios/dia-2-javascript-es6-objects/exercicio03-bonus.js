@@ -18,7 +18,7 @@ const lesson1 = {
     turno: 'noite',
   };
 
-let allLessons = (obj1, obj2, obj3) => Object.assign({}, {obj1}, {obj2}, {obj3});
+const allLessons = (obj1, obj2, obj3) => Object.assign({}, {obj1}, {obj2}, {obj3});
 console.log(allLessons(lesson1, lesson2, lesson3));
 /*
   1- Crie uma função para contar quantos estudantes assistiram às aulas de Matemática.
