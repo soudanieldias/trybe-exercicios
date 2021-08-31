@@ -32,13 +32,8 @@ const lesson1 = {
 */
 
 // 1- Crie uma função para adicionar o turno da manhã na lesson2.
-function setParams (objName, objKey, keyValue) {
-    // Recebe 3 tipos de parâmetro e Joga dentro do object
-    objName[objKey] = keyValue;
-    console.log(lesson2);
-    return lesson2;
-  }
-setParams(lesson2, 'turno', 'manhã');
+let setParams = (objName, objKey, keyValue) => objName[objKey] = keyValue;
+console.log(setParams(lesson2, 'turno', 'manhã'));
 
 // 2- Crie uma função para listar as keys de um objeto.
 let listKeys = objName => `Keys do Object: ${Object.keys(objName)}`;
