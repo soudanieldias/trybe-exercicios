@@ -62,3 +62,7 @@ let totalAlunos = allLessons => {
 };
 let functionAllLessons = allLessons(lesson1, lesson2, lesson3);
 totalAlunos(functionAllLessons);
+
+// 7- Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto.
+let getValueByNumber = (objName, keyPosition) => console.log(Object.keys(lesson1)[keyPosition]);
+getValueByNumber(lesson1, 3);
