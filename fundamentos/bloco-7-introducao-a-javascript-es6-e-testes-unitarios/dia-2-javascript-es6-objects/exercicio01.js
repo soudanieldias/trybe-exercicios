@@ -40,14 +40,20 @@ const order = {
   */
   const customerInfo = (order) => {
     // Adicione abaixo as informações necessárias.
-    console.log (`Òlá Ana Silveira, entrega para: ${order['name']}, Telefone ${order['phoneNumber']}, R. ${order['address'].street}, Nº ${order['address'].number}, AP: ${order['address'].apartment}`);
+    console.log (`Olá Ana Silveira, entrega para: ${order['name']}, Telefone ${order['phoneNumber']}, R. ${order['address'].street}, Nº ${order['address'].number}, AP: ${order['address'].apartment}`);
   }
   
   customerInfo(order);
   
+  /*
+  2- Complete a função orderModifier() para que seu retorno seja similar a "Olá Luiz Silva,
+  o total do seu pedido de marguerita, pepperoni e Coca-Cola Zero é R$ 50,00."
+    => Modifique o nome da pessoa compradora.
+    => Modifique o valor total da compra para R$ 50,00.
+  */
   const orderModifier = (order) => {
     // Adicione abaixo as informações necessárias.
   
   }
-  
+    
   orderModifier(order);
