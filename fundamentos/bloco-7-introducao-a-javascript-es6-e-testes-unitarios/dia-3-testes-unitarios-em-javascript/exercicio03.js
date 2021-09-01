@@ -29,3 +29,7 @@ let newVar = myRemoveWithoutCopy(myArray, 3);
 // 3.2- Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 3) não retorna o array [1, 2, 3, 4]
 assert.deepStrictEqual(newVar, [1, 2, 4], "O valor não é igual ao esperado!");
 assert.notDeepStrictEqual(newVar, [1, 2, 3, 4,], "O valor não é igual ao esperado!");
+
+// 3.3- Faça uma chamada para a função myRemoveWithoutCopy e verifique se o array passado por parâmetro sofreu alterações
+myRemoveWithoutCopy(myArray, 1);
+assert.strictEqual(myArray.length, 3);
