@@ -21,3 +21,8 @@ function myRemoveWithoutCopy(arr, item) {
 }
 
 // implemente seus testes aqui
+// 3.1- Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 3) retorna o array esperado
+let myArray = [1, 2, 3, 4];
+let newVar = myRemoveWithoutCopy(myArray, 3);
+console.log(newVar);
+assert.deepStrictEqual(newVar, [1, 2, 4], "Não é igual!");
