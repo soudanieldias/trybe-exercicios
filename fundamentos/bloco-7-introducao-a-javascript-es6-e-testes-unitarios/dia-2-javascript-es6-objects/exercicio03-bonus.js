@@ -27,12 +27,16 @@ const allLessons = (obj1, obj2, obj3) => Object.assign({}, {lesson1}, {lesson2},
 */
 
 // 1- Crie uma função para contar quantos estudantes assistiram às aulas de Matemática.
-const countMathStudents = allLessons => {
+const countMathStudents = obj => {
 
-  // console.log(allLessons); // [DEBUG] Retorna o conjunto das 3 lessons
-
-  for (key in allLessons) {
-    console.log(` Valor ${key}: ${allLessons}`);
+  let total = 0;
+  const array = Object.keys(obj);
+  for (index in array) {
+    if(obj[array[index]].materia === 'Matemática'){
+    total += obj[array[index]].numeroEstudantes;
+    }
   }
+  console.log(`No total, ${total} estudantes assistiram as aulas de ${obj[array[index]].materia}`);
 }
-countMathStudents(allLessons(lesson1, lesson2, lesson3));
+let auxMath = allLessons(lesson1, lesson2, lesson3);
+countMathStudents(auxMath);
