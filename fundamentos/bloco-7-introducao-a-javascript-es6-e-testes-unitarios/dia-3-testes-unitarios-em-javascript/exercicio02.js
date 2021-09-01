@@ -18,3 +18,10 @@ function myRemove(arr, item) {
 }
 
 // implemente seus testes aqui
+// 2.1- Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado
+let arrayForCompare = [1, 2, 3, 4];
+let arrayIncomplete = myRemove(arrayForCompare, 3);
+
+assert.strictEqual(typeof myRemove, 'function'); // Verifica se myRemove é uma Função
+assert.deepStrictEqual(arrayIncomplete, [1, 2, 4], 'TESTE'); // Verifica se os objetos e seus filhos são exatamente iguais a [1, 2, 3]
+assert.notDeepStrictEqual(arrayIncomplete, arrayForCompare); // Verifica se o objeto modificado e o original não são iguais
