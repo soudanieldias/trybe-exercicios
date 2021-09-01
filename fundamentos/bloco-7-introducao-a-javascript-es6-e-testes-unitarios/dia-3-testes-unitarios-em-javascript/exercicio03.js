@@ -32,4 +32,7 @@ assert.notDeepStrictEqual(newVar, [1, 2, 3, 4,], "O valor não é igual ao esper
 
 // 3.3- Faça uma chamada para a função myRemoveWithoutCopy e verifique se o array passado por parâmetro sofreu alterações
 myRemoveWithoutCopy(myArray, 1);
-assert.strictEqual(myArray.length, 3);
+// assert.strictEqual(myArray.length, 3);
+
+// 3.4- Verifique se a chamada myRemoveWithoutCopy([1, 2, 3, 4], 5) retorna o array esperado
+assert.deepStrictEqual(myRemoveWithoutCopy([1, 2, 3, 4], 5), [1, 2, 3, 4]);
