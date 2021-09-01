@@ -17,3 +17,4 @@ function sum(a, b) {
 
 // implemente seus testes aqui
 // 1.1- Teste se o retorno de sum(4, 5) é 9
+assert.strictEqual(sum(4, 5), 9, 'ERRO: 4 + 5 = 9');
