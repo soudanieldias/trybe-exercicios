@@ -12,3 +12,10 @@ const greetPeople = (people) => {
   
   const parameter = ['Irina', 'Ashleigh', 'Elsa'];
   const result = ['Hello Irina', 'Hello Ashleigh', 'Hello Elsa'];
+  
+const assert = require('assert');
+assert.strictEqual(typeof greetPeople, 'function');
+
+assert.strictEqual(greetPeople(parameter[0]), result[0]);
+assert.strictEqual(greetPeople(parameter[1]), result[1]);
+assert.strictEqual(greetPeople(parameter[2]), result[2]);
