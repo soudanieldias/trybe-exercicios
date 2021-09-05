@@ -5,14 +5,23 @@
 // 4 - Agora desenvolva uma HOF chamada doingThings e configure esta função para que imprima no console o resultado da execução das funções que você criou nos exemplos anteriores.
 
 // 1 - Crie uma função que retorne a string 'Acordando!!';
-const wakeUp = () => console.log('Acordando!!');
-wakeUp();
+const wakeUp = () => 'Acordando!!'
+// wakeUp(); // [DEBUG]
 
 // 2 - Crie outra função que retorne a string 'Bora tomar café!!';
-const timeToCoffee = () => console.log('Bora tomar café!!');
-timeToCoffee();
+const timeToCoffee = () => 'Bora tomar café!!'
+// timeToCoffee(); // [DEBUG]
 
 // 3 - Crie mais uma função que retorne a string 'Partiu dormir!!';
-const timeToSleep = () => console.log('Partiu dormir!!');
-timeToSleep();
+const timeToSleep = () => 'Partiu dormir!!'
+// timeToSleep(); // [DEBUG]
+
+// 4 - Agora desenvolva uma HOF chamada doingThings e configure esta função para que
+// imprima no console o resultado da execução das funções que você criou nos exemplos anteriores.
+const doingThings = (func1, func2, func3) => {
+    console.log(func1);
+    console.log(func2);
+    console.log(func3);
+}
+doingThings(wakeUp(), timeToCoffee(), timeToSleep());
 
