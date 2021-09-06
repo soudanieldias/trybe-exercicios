@@ -24,3 +24,9 @@ const dragon = {
 };
 
 const battleMembers = { mage, warrior, dragon };
+
+const calcDamage = (callback) => {
+  const newDamage = Math.floor(Math.random() * (callback.strength - 15)) + 15;
+  return newDamage;
+}
+console.log( calcDamage(dragon) );
