@@ -6,8 +6,9 @@
 const sorteioResult = (numeroApostado, callBack) => {
   // Essa função gera um número aleatório, entre 1-5
   let randomNumber = Math.floor(Math.random() * (5 - 1)) + 1; // Math.random() * (max - min) + min;
-  console.log(randomNumber);
+  // console.log(randomNumber);
   // Também recebe como parâmetro o número Apostado
   // Executa função que checa se o Número Apostado foi sorteado
+  callBack(numeroApostado, randomNumber);
 }
-sorteioResult(10, 20);
+sorteioResult(3, checkNumber);
