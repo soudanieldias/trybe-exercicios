@@ -17,6 +17,6 @@ const sorteioResult = (numeroApostado, callBack) => {
   // console.log(randomNumber);
   // Também recebe como parâmetro o número Apostado
   // Executa função que checa se o Número Apostado foi sorteado
-  callBack(numeroApostado, randomNumber);
+  return callBack(numeroApostado, randomNumber);
 }
-sorteioResult(3, checkRandomNumber);
+console.log(sorteioResult(3, checkRandomNumber));
