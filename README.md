@@ -57,8 +57,8 @@ Repositório de Exercícios realizados por __[mim](https://www.linkedin.com/in/s
 ##### Bloco 7: [Introdução à JavaScript ES6 e Testes Unitários](https://github.com/soudanieldias/trybe-exercicios/tree/master/01-fundamentos/bloco-07-introducao-a-javascript-es6-e-testes-unitarios)
 - [X] 7.1 - JavaScript ES6 - let, const, arrow functions e template literals
 - [X] 7.2 - JavaScript ES6 - Objects
-- [ ] 7.3 - Testes unitários em JavaScript
-- [ ] 7.4 - Projeto - JavaScript Testes Unitários
+- [X] 7.3 - Testes unitários em JavaScript
+- [X] 7.4 - Projeto - JavaScript Testes Unitários
 
 ##### Bloco 8: [Higher Order Functions do JavaScript ES6](https://github.com/soudanieldias/trybe-exercicios/tree/master/01-fundamentos/bloco-08-high-order-functions-do-javascript-es6)
 - [ ] 8.1 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
