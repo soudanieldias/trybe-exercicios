@@ -3,6 +3,14 @@
 // o número apostado e uma função que checa se o número apostado é igual ao número sorteado.
 // O retorno da sua HOF deve ser uma string (Ex: "Tente novamente" ou "Parabéns você ganhou").
 
+const checkRandomNumber = (num1, num2) => {
+    if (num1 === num2) {
+        return 'Parabéns, você ganhou';
+    } else {
+        return 'Tente novamente';
+    }
+}
+
 const sorteioResult = (numeroApostado, callBack) => {
   // Essa função gera um número aleatório, entre 1-5
   let randomNumber = Math.floor(Math.random() * (5 - 1)) + 1; // Math.random() * (max - min) + min;
@@ -11,4 +19,4 @@ const sorteioResult = (numeroApostado, callBack) => {
   // Executa função que checa se o Número Apostado foi sorteado
   callBack(numeroApostado, randomNumber);
 }
-sorteioResult(3, checkNumber);
+sorteioResult(3, checkRandomNumber);
