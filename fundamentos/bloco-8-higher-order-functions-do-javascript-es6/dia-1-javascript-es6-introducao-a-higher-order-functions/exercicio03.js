@@ -19,8 +19,17 @@ const countCorrect = (rigAns, studAns, callack) => { // countCorrect Recebe Gaba
     }
     return `Resultado final: ${contador} corretas`;
 };
-const newHof = () => {
+const newHof = (rAnswer) => {
+    // Função que chama a countCorrect, e de acordo com o seu retorno, altera pontuação.
 
 }
 console.log( newHof(RIGHT_ANSWERS, STUDENT_ANSWERS, callback) );
 
+// console.log(repeat(RIGHT_ANSWERS, STUDENT_ANSWERS, (rAnswer, uAnswer) => {
+//   if (rAnswer === uAnswer) {
+//     return 1;
+//   } if (uAnswer === 'N.A') {
+//     return 0;
+//   }
+//   return -0.5;
+// }));
