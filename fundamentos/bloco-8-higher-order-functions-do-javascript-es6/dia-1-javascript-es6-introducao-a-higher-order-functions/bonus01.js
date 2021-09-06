@@ -30,3 +30,8 @@ const calcDamage = (callback, refData) => {
   return newDamage;
 }
 console.log( calcDamage(dragon, 'strength') );
+
+/*
+2- Crie uma função que retorna o dano causado pelo warrior.
+  ** O dano será um número aleatório entre o valor do atributo strength (dano mínimo) e o valor de strength * weaponDmg (dano máximo).
+*/
