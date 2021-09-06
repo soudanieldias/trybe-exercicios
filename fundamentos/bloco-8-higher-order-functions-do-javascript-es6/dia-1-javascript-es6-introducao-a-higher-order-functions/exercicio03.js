@@ -9,7 +9,7 @@
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const countCorrect = (rigAns, studAns, callack) => { // countCorrect Recebe Gabarito, Prova e função callBack
+const countCorrect = (rigAns, studAns, callback) => { // countCorrect Recebe Gabarito, Prova e função callBack
     let counter = 0; // Declara contador de acertos como 0
     for (index = 0; index < rigAns.length; index += 1) {
         // Faz um loop for que percorre o array, comparando o elemento x do gabarito com o elemento x do aluno
@@ -17,19 +17,17 @@ const countCorrect = (rigAns, studAns, callack) => { // countCorrect Recebe Gaba
         // Guarda em uma variável o returno da função dinâmica a ser utilizada para contagem
         counter += callBackReturn;
     }
-    return `Resultado final: ${contador} corretas`;
+    return `Resultado final: ${counter} corretas`;
 };
-const newHof = (rAnswer) => {
-    // Função que chama a countCorrect, e de acordo com o seu retorno, altera pontuação.
+// const newHof = (rAnswer) => {
+//     // Função que chama a countCorrect, e de acordo com o seu retorno, altera pontuação.
 
-}
-console.log( newHof(RIGHT_ANSWERS, STUDENT_ANSWERS, callback) );
-
-// console.log(repeat(RIGHT_ANSWERS, STUDENT_ANSWERS, (rAnswer, uAnswer) => {
-//   if (rAnswer === uAnswer) {
-//     return 1;
-//   } if (uAnswer === 'N.A') {
-//     return 0;
-//   }
-//   return -0.5;
-// }));
+// }
+console.log( countCorrect(RIGHT_ANSWERS, STUDENT_ANSWERS, (rAnswer, uAnswer) => {
+  if (rAnswer === uAnswer) {
+    return 1;
+  } if (uAnswer === 'N.A') {
+    return 0;
+  }
+  return -0.5;
+}));
