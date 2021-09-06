@@ -14,3 +14,14 @@ const newEmployees = (callback) => {
     return employees;
   };
 
+  const generateMail = (fullName) => { // Função generateMail recebe parâmetro fullName
+    const email = fullName.toLowerCase().split(' ').join('_');
+    // Salva esse parâmetro na variável email, identificando os espaçamentos ' ' e
+    // os substituindo por '_'
+    // Logo após isso, reatribui valor dos elementos newEmployees com o retorno dado por cada chamada de função
+    return { fullName, email: `${email}@trybe.com` };
+    // Como cada callBack possui um nome diferente, cada um em uma variavel, o retorno da função é sempre o fullName e seu email no modelo nome_sobrenome@trybe.com
+    
+  };
+
+  console.log(newEmployees(generateMail));
