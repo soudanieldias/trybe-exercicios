@@ -9,10 +9,18 @@
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const countCorrect = () => {
-    
-}
-const newHof = (rigAns, studAns, callback) => {
+const countCorrect = (rigAns, studAns, callack) => { // countCorrect Recebe Gabarito, Prova e função callBack
+    let counter = 0; // Declara contador de acertos como 0
+    for (index = 0; index < rigAns.length; index += 1) {
+        // Faz um loop for que percorre o array, comparando o elemento x do gabarito com o elemento x do aluno
+        const callBackReturn = callback(rigAns[index], studAns[index]);
+        // Guarda em uma variável o returno da função dinâmica a ser utilizada para contagem
+        counter += callBackReturn;
+    }
+    return `Resultado final: ${contador} corretas`;
+};
+const newHof = () => {
 
 }
-// (RIGHT_ANSWERS, STUDENT_ANSWERS, callback)
+console.log( newHof(RIGHT_ANSWERS, STUDENT_ANSWERS, callback) );
+
