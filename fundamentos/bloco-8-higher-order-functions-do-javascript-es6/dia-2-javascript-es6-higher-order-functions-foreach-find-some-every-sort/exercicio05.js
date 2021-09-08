@@ -73,6 +73,10 @@ const expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
   // escreva seu código aqui
+  // Every Function: Testa se todos os elementos do Array passam no teste disposto dentro da funçao Array.every().
+  return books.every((book) => (
+    book.author.birthYear > 1900 && book.author.birthYear <= 2000
+  ));
 }
 
 assert.strictEqual(everyoneWasBornOnSecXX(), expectedResult);
