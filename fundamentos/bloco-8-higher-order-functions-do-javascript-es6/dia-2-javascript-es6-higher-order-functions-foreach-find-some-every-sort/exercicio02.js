@@ -85,4 +85,4 @@ function smallerName() {
 }
 smallerName();
 
-// assert.strictEqual(smallerName(), 'Duna');
+assert.strictEqual(smallerName(), 'Duna');
