@@ -73,6 +73,15 @@ const expectedResult = false;
 
 function authorUnique() {
   // escreva seu código aqui
+  // Executa uma Arrow Function, que retorna true or false
+  return books.every((book) =>
+    // É feita a verificação, se não chegou ao fim do array a ser comparado
+    !books.some((bookSome) =>
+      // E, caso não, é comparado o ano de aniversário e o nome do autor dos elementos A & B
+      (bookSome.author.birthYear === book.author.birthYear)
+      && (bookSome.author.name !== book.author.name)));
+      // Se as duas condições forem satisfeitas, é retornado True, se não, False!
 }
 
+assert.strictEqual(authorUnique(), expectedResult);
 assert.strictEqual(authorUnique(), expectedResult);
