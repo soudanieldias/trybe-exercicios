@@ -4,9 +4,9 @@ const musicas = [
     { id: '31031687', title: 'Chaconne, Partita No. 2 BWV 1004' },
   ]
   
-  function findMusic(id, element) {
+  function findMusic(id) {
     // Adicione seu código aqui
-    element.find( (music) => music.id === id );
+    return musicas.find((musica) => musica.id === id );
   }
   
-  console.log(findMusic('31031685', 'musicas'));
+  console.log(findMusic('31031685'));
