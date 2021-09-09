@@ -1,4 +1,5 @@
 const assert = require('assert');
+const { resourceLimits } = require('worker_threads');
 
 const books = [
   {
@@ -100,9 +101,23 @@ const books = [
       author: 'J. R. R. Tolkien',
     },
   ];
-  
-  function nameAndAge() {
+  const result = [];
+
+  const nameAndAge = books.map( (book) => {
     // escreva seu código aqui
-  }
+
+    // Calcula a idade no lançamento
+    let idadeRelease = book.releaseYear - book.author.birthYear;
+
+    // Joga o Object esperado para dentro do Result
+    result.push(`{ age: ${idadeRelease}, author: '${book.author.name}'}`);
+
+    // result.push(retorno); // [DEBUG]
+    // console.log(result.push(`{age: ${idade}, author: ${book.author.name}}`)); // [DEBUG]
+    // console.log(result); // [DEBUG]
+
+    // Retorna o array Ordenado
+    return result;
+  })
   
-  assert.deepStrictEqual(nameAndAge(), expectedResult);
+  assert.deepStrictEqual(nameAndAge, expectedResult);
