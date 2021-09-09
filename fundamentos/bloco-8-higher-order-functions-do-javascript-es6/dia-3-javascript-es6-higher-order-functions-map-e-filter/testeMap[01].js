@@ -9,7 +9,7 @@ const arrayEmail = [
 ]
 
 const enviarEmail = (callback) => {
-    console.log(`E-mail enviado com sucesso para: ${callback.email} Com o conteúdo: ${callback.msg}`);
+    console.log(`E-mail enviado com sucesso para: ${callback.email} Com o conteúdo: ${callback.mensagem}`);
 }
 
 let listaEmails = arrayEmail.map( (email) => {
@@ -18,3 +18,7 @@ let listaEmails = arrayEmail.map( (email) => {
 });
 
 // console.log(listaEmails);
+
+listaEmails.forEach( (mail) => {
+    enviarEmail(mail);
+});
