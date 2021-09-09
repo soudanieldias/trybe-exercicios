@@ -96,6 +96,12 @@ const books = [
   
   function oldBooksOrdered() {
     // escreva seu código aqui
+    // PASSO-A-PASSO:
+    // 1) Identificar e capturar os dados do Array do Livro;
+    // 2) Filtrar os livros que possuem mais de 60 anos de existencia, com base em sua data de Publicação [USAR FILTER]
+    // 3) Armazenas os dados desses livros em um Array [CRIAR ARRAY LIVROSANTIGOS COM OS DADOS]
+    // 4) Ordenar este array [UTILIZAR O SORT B-A PARA ORDENAR OS LIVROS DO MAIS VELHO PARA O MENOS VELHO]
+    // 5) Retornar este Array na funçao oldBooksOrdered [RETURN]
   }
   
   assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
