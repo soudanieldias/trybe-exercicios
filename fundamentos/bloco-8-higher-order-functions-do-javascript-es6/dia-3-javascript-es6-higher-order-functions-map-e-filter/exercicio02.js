@@ -101,23 +101,13 @@ const books = [
       author: 'J. R. R. Tolkien',
     },
   ];
-  const result = [];
 
-  const nameAndAge = books.map( (book) => {
-    // escreva seu código aqui
-
-    // Calcula a idade no lançamento
-    let idadeRelease = book.releaseYear - book.author.birthYear;
-
-    // Joga o Object esperado para dentro do Result
-    result.push(`{ age: ${idadeRelease}, author: '${book.author.name}'}`);
-
-    // result.push(retorno); // [DEBUG]
-    // console.log(result.push(`{age: ${idade}, author: ${book.author.name}}`)); // [DEBUG]
-    // console.log(result); // [DEBUG]
-
-    // Retorna o array Ordenado
-    return result;
-  })
-  
-  assert.deepStrictEqual(nameAndAge, expectedResult);
+  function nameAndAge () {
+    return books.map( (book) => (
+      {
+        age: book.releaseYear - book.author.birthYear,
+        author: `${book.author.name}`,
+      }
+      )).sort( (obj1, obj2) => obj1.age - obj2.age);
+  }
+  assert.deepStrictEqual(nameAndAge(), expectedResult);
