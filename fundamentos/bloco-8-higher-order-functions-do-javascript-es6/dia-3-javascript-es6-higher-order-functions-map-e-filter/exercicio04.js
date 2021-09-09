@@ -93,15 +93,21 @@ const books = [
       releaseYear: 1954,
     },
   ];
-  
-  function oldBooksOrdered() {
-    // escreva seu código aqui
-    // PASSO-A-PASSO:
+
+  // PASSO-A-PASSO:
     // 1) Identificar e capturar os dados do Array do Livro;
     // 2) Filtrar os livros que possuem mais de 60 anos de existencia, com base em sua data de Publicação [USAR FILTER]
     // 3) Armazenas os dados desses livros em um Array [CRIAR ARRAY LIVROSANTIGOS COM OS DADOS]
     // 4) Ordenar este array [UTILIZAR O SORT B-A PARA ORDENAR OS LIVROS DO MAIS VELHO PARA O MENOS VELHO]
     // 5) Retornar este Array na funçao oldBooksOrdered [RETURN]
+
+  const checkReleaseYear = (book) => (2021 - book.releaseYear) > 60; 
+
+  function oldBooksOrdered() {
+    // escreva seu código aqui
+    let result = books.filter((book) => (2021 - book.releaseYear) > 60).sort((bookA, bookB) => bookA.releaseYear - bookB.releaseYear);
+    return result;
   }
-  
+  // oldBooksOrdered();
+
   assert.deepStrictEqual(oldBooksOrdered(), expectedResult);
