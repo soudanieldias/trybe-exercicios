@@ -75,9 +75,10 @@ const books = [
     'Isaac Asimov',
     'J. R. R. Tolkien',
   ];
-  
-  function fantasyOrScienceFictionAuthors() {
-    // escreva seu código aqui
-  }
-  
+  const fantasyOrScienceFictionAuthors = () => books
+  .filter( (book) => ( book.genre === 'Fantasia' || book.genre === 'Ficção Científica')) // Filtra os livros que possuem o Gênero Fantasia e Ficção Científica
+  .map((book) => book.author.name) // Cria um novo array apenas com os elementos buscados no mesmo (Nome do Autor)
+  .sort(); // Ordena Crescentemente os nomes dos autores Recebidos como array na função anterior (MAP)
+
+  // console.log(fantasyOrScienceFictionAuthors());
   assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
