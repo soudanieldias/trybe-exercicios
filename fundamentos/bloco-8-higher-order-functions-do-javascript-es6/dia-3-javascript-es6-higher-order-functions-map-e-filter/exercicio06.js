@@ -75,8 +75,10 @@ const books = [
     'O Chamado de Cthulhu',
   ];
   
-  function oldBooks() {
-    // escreva seu código aqui
-  }
-  
+  const oldBooks = () => {
+    return books
+    .filter((book) => (2021 - book.releaseYear) > 60)
+    .map((book) => book.name)
+  };
+// console.log(oldBooks);
   assert.deepStrictEqual(oldBooks(), expectedResult);
