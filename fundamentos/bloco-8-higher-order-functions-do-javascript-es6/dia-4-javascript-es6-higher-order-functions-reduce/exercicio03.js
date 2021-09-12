@@ -74,6 +74,23 @@ const expectedResult = 43;
 
 function averageAge() {
   // escreva seu código aqui
+  const getSum = (a, b) => a + b;
+  const arrayMap = books.map( (book) => (book.releaseYear - book.author.birthYear));
+  // console.log(arrayMap); // [DEBUG] Verifica valores no arrayMap
+  // Verifica a idade dos autores na data de lançamento de seus livros
+
+  const sumAge = () => arrayMap.reduce(getSum, 0);
+  // Cria um array Reduzido com a soma dos números
+  // console.log(`Valor sumAge: `, sumAge()); // [DEBUG] Verifica Valor no sumAge
+
+  const tamanhoArray = arrayMap.length; // Guarda tamanho do array com idade dos Autores
+  // console.log(`Tamanho do Array: `, tamanhoArray) // [DEBUG] Verifica Tamanho do Array
+
+  const media = sumAge() / tamanhoArray; // Calcula a média
+  // console.log(`Valor da Média: `, media); // [DEBUG] Verifica Valor da Média
+  // const sumNumbers = arrayAge.reduce(getSum, 0);
+  return media;
 }
-// console.log(averageAge());
-// assert.strictEqual(averageAge(), expectedResult);
+
+// console.log(averageAge()); // [DEBUG] Verifica retorno da Função
+assert.strictEqual(averageAge(), expectedResult);
