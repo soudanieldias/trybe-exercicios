@@ -78,5 +78,5 @@ function reduceNames() {
   const nomes = books.reduce (reduceFunction, '');
   return nomes.trim(); // Remove elementos 'Em Branco' / Vazios no array.
 }
-console.log(reduceNames());
-// assert.strictEqual(reduceNames(), expectedResult);
+// console.log(reduceNames());
+assert.strictEqual(reduceNames(), expectedResult);
