@@ -23,16 +23,22 @@ const expected = [
 // ** Alterar o object grades para o novo array de 3 posições, com um elemento apenas em cada posição
 // ** Retornar 3 objects com 2 chaves: { name: nome do aluno, average: media das notas }.
 
-const getAverage = () => {
-    return 'Teste';
+const sumGrades = (acc, grade) => {
+    // const notas = grades.reduce();
+    return acc + grade;
+}
+
+const calcAverage = (index) => {
+    const sum = grades[index].reduce(sumGrades, 0);
+    return sum/grades[index].length;
 }
 
 function studentAverage() {
   // escreva seu código aqui
-  return students.reduce( (acc, student) => {
+  return students.reduce( (acc, student, index) => {
       const object = {
           name: student,
-          average: getAverage(),
+          average: calcAverage(index),
       };
       acc.push(object);
       return acc;
