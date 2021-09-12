@@ -7,6 +7,9 @@ const assert = require('assert');
 */
 
 // escreva sum abaixo
+const sum = (...args) => args.reduce((accumulator, current) => accumulator + current, 0);
+
+// console.log( sum(10, 20, 30) ); // [DEBUG]
 
 assert.strictEqual(sum(), 0);
 assert.strictEqual(sum(1), 1);
