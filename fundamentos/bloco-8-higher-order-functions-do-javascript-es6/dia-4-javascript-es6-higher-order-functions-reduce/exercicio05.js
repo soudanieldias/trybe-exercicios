@@ -16,7 +16,7 @@ const names = [
 function containsA() {
   // escreva seu código aqui
   const arrayConjunto = names.join(' '); // Salva o array em uma variável arrayConjunto, separando cada palavra por Espaço
-  console.log(arrayConjunto); // [DEBUG] Verifica comportamento da variável arrayConjunto.
+  // console.log(arrayConjunto); // [DEBUG] Verifica comportamento da variável arrayConjunto.
 }
 containsA(); // [DEBUG] Verifica comportamento da Função
 
