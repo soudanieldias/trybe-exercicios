@@ -21,10 +21,16 @@ function containsA() {
   const arrayMinusculo = arrayConjunto.toLowerCase();
   // console.log(arrayMinusculo); // [DEBUG] Verifica comportamento da função que transforma letras em minúsculas
 
-  
+  let contador = 0;
+  for (let index = 0; index < arrayMinusculo.length; index +=1 ) {
+    if (arrayMinusculo[index] === 'a') {
+      contador += 1;
 
-  // return contador;
+    }
+  }
+
+  return contador;
 }
-containsA(); // [DEBUG] Verifica comportamento da Função
+console.log(containsA()); // [DEBUG] Verifica comportamento da Função
 
 // assert.deepStrictEqual(containsA(), 20);
