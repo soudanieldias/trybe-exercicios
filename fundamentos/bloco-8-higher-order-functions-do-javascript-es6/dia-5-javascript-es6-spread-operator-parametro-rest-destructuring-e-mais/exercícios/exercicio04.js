@@ -31,9 +31,10 @@ const people = [
 // escreva filterPeople abaixo
 
 const filterPeople = (obj) => obj.filter(
-    ({ bornIn, nationality }) => 
-    bornIn <= 2000 && bornIn > 1990
-    && nationality === 'Australian'
+    ({ nationality, bornIn }) => 
+    nationality === 'Australian'
+    && bornIn > 1900
+    && bornIn <= 2000,
     );
 
 const filteredPeople = filterPeople(people);
