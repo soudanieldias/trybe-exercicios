@@ -1,4 +1,4 @@
-const saudacoes = ['Olá', (saudacao) => console.log(saudacao)];
+const saudacoes = ['Olá', (saudacao) => saudacao];
 
 // saudacoes[1](saudacoes[0]); // Olá
 
