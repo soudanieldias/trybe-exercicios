@@ -64,3 +64,19 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
+
+// Crie uma string com os nomes de todas as pessoas autoras.
+const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
+
+const reduceFunction = (acc, book, index, array) => { // Função do Reduce, que recebe accumulator, elemento, index do elemento, array manipulado
+    if (index === array.length - 1) return `${acc} ${book.author.name}.`; // Se o tamanho do array é o último elemento, retorne ele
+    return `${acc} ${book.author.name},`; // Retorna por padrão 
+  };
+
+function reduceNames() {
+  // escreva seu código aqui
+  const nomes = books.reduce (reduceFunction, '');
+  return nomes.trim(); // Remove elementos 'Em Branco' / Vazios no array.
+}
+console.log(reduceNames());
+// assert.strictEqual(reduceNames(), expectedResult);
