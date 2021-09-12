@@ -4,3 +4,7 @@ const greeting = (user) => {
   };
   
   greeting(); // Welcome usuário!
+
+  const greetingSimplified = (user = 'usuário') => console.log(`Welcome ${user}!`);
+
+  greetingSimplified(); // Welcome usuário!
