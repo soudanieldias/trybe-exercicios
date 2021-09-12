@@ -17,18 +17,14 @@ function containsA() {
   // escreva seu código aqui
   const arrayConjunto = names.join(' '); // Salva o array em uma variável arrayConjunto, separando cada palavra por Espaço
   // console.log(arrayConjunto); // [DEBUG] Verifica comportamento da variável arrayConjunto.
-
   const arrayMinusculo = arrayConjunto.toLowerCase();
   // console.log(arrayMinusculo); // [DEBUG] Verifica comportamento da função que transforma letras em minúsculas
-
   let contador = 0;
   for (let index = 0; index < arrayMinusculo.length; index +=1 ) {
     if (arrayMinusculo[index] === 'a') {
       contador += 1;
-
     }
   }
-
   return contador;
 }
 console.log(containsA()); // [DEBUG] Verifica comportamento da Função
