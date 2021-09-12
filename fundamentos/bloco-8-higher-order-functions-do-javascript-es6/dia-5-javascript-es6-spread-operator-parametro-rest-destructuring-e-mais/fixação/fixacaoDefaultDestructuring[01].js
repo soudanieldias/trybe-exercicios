@@ -4,7 +4,7 @@
   Ajuste a função GetNationality para que a chamada
   GetNationality(person) retorne João is Brazilian.
 */
-const getNationality = ({ firstName, nationality }) => `${firstName} is ${nationality}`;
+const getNationality = ({ firstName, nationality = 'Brazilian'}) => `${firstName} is ${nationality}`;
 
 const person = {
   firstName: 'João',
