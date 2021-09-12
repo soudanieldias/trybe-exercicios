@@ -15,16 +15,15 @@ const names = [
 
 function containsA() {
   // escreva seu código aqui
-  const arrayConjunto = names.join(' '); // Salva o array em uma variável arrayConjunto, separando cada palavra por Espaço
-  // console.log(arrayConjunto); // [DEBUG] Verifica comportamento da variável arrayConjunto.
-  const arrayMinusculo = arrayConjunto.toLowerCase();
-  // console.log(arrayMinusculo); // [DEBUG] Verifica comportamento da função que transforma letras em minúsculas
-  let contador = 0;
-  for (let index = 0; index < arrayMinusculo.length; index +=1 ) {
-    if (arrayMinusculo[index] === 'a') contador += 1;
-  }
-  return contador;
-}
-console.log(containsA()); // [DEBUG] Verifica comportamento da Função
 
-// assert.deepStrictEqual(containsA(), 20);
+  const checkWord = (acumulator, current) => { // Função que verifica Palavra
+    if (current === 'a' || current === 'A') return acumulator + 1; // Se palavra contém 'a' ou 'A', incrementa o acumulator
+    return acumulator; // Enquanto não encontrar a letra A/a, Retorna o Accumulator imutável
+ };
+
+  return names.reduce((acc, curr) =>
+     acc + curr.split('').reduce(checkWord, 0), 0);
+}
+// console.log(containsA()); // [DEBUG] Verifica comportamento da Função
+
+assert.deepStrictEqual(containsA(), 20);
