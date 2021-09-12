@@ -1,66 +1,23 @@
 const assert = require('assert');
 
-const books = [
-  {
-    id: 1,
-    name: 'As Crônicas de Gelo e Fogo',
-    genre: 'Fantasia',
-    author: {
-      name: 'George R. R. Martin',
-      birthYear: 1948,
-    },
-    releaseYear: 1991,
-  },
-  {
-    id: 2,
-    name: 'O Senhor dos Anéis',
-    genre: 'Fantasia',
-    author: {
-      name: 'J. R. R. Tolkien',
-      birthYear: 1892,
-    },
-    releaseYear: 1954,
-  },
-  {
-    id: 3,
-    name: 'Fundação',
-    genre: 'Ficção Científica',
-    author: {
-      name: 'Isaac Asimov',
-      birthYear: 1920,
-    },
-    releaseYear: 1951,
-  },
-  {
-    id: 4,
-    name: 'Duna',
-    genre: 'Ficção Científica',
-    author: {
-      name: 'Frank Herbert',
-      birthYear: 1920,
-    },
-    releaseYear: 1965,
-  },
-  {
-    id: 5,
-    name: 'A Coisa',
-    genre: 'Terror',
-    author: {
-      name: 'Stephen King',
-      birthYear: 1947,
-    },
-    releaseYear: 1986,
-  },
-  {
-    id: 6,
-    name: 'O Chamado de Cthulhu',
-    genre: 'Terror',
-    author: {
-      name: 'H. P. Lovecraft',
-      birthYear: 1890,
-    },
-    releaseYear: 1928,
-  },
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
-// Adicione o código do exercício aqui:
+// Dado o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+// LÓGICA DA FUNÇÃO:
+// ** Manipula o array names, transformando-o em uma string 'join'
+// ** Muda todas as letras do array para minúsculas 'toLowerCase'
+// ** Busca pelas letras 'a' encontradas no array, e a cada find bem sucedido, incrementa 1 ao contador
+// ** 
+
+function containsA() {
+  // escreva seu código aqui
+  const arrayConjunto = names.join(' ');
+  console.log(arrayConjunto);
+}
+containsA(); // [DEBUG] Verifica comportamento da Função
+
+// assert.deepStrictEqual(containsA(), 20);
