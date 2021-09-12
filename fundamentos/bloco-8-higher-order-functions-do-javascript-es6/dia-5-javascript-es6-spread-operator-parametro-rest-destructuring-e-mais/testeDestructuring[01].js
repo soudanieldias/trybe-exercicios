@@ -4,5 +4,7 @@ const product = {
     seller: 'Casas de Minas',
   };
 
-const { name } = product;
+const { name, price, seller } = product;
 console.log(name); // Smart TV Crystal UHD
+console.log(price); // 1899.05
+console.log(seller); // Casas de Minas
