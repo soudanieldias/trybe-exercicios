@@ -4,6 +4,6 @@ const person = {
     age: 34,
   };
   
-  const { nationality } = person;
+  const { nationality = 'Brazilian' } = person;
 
   console.log(nationality);
