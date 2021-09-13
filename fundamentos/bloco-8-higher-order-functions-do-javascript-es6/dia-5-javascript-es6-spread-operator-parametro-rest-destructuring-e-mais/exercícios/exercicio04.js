@@ -39,8 +39,8 @@ const filterPeople = (obj) => obj.filter(
 
 const filteredPeople = filterPeople(people);
 
-// assert.deepStrictEqual(filteredPeople[0], { name: 'Nicole', bornIn: 1992, nationality: 'Australian' });
-// assert.deepStrictEqual(filteredPeople[1], { name: 'Toby', bornIn: 1901, nationality: 'Australian' });
+assert.deepStrictEqual(filteredPeople[0], { name: 'Nicole', bornIn: 1992, nationality: 'Australian' });
+assert.deepStrictEqual(filteredPeople[1], { name: 'Toby', bornIn: 1901, nationality: 'Australian' });
 
-console.log(filteredPeople[0]);
-console.log(filteredPeople[1]);
+// console.log(filteredPeople[0]); // [DEBUG]
+// console.log(filteredPeople[1]); // [DEBUG]
