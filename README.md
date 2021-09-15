@@ -61,9 +61,9 @@ Repositório de Exercícios realizados por __[mim](https://www.linkedin.com/in/s
 - [X] 7.4 - Projeto - JavaScript Testes Unitários
 
 ##### Bloco 8: [Higher Order Functions do JavaScript ES6](https://github.com/soudanieldias/trybe-exercicios/tree/master/01-fundamentos/bloco-08-high-order-functions-do-javascript-es6)
-- [ ] 8.1 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
-- [ ] 8.2 - JavaScript ES6 - Higher Order Functions - map e filter
-- [ ] 8.3 - JavaScript ES6 - Higher Order Functions - reduce
+- [X] 8.1 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
+- [X] 8.2 - JavaScript ES6 - Higher Order Functions - map e filter
+- [X] 8.3 - JavaScript ES6 - Higher Order Functions - reduce
 - [ ] 8.4 - JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais
 - [ ] 8.5 - Projeto - Zoo functions
 
