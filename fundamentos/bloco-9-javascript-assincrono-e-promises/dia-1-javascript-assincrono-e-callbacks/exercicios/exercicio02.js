@@ -31,5 +31,7 @@ setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
 
 /**
  * Dado o código acima, qual a ordem de finalização de execução das linhas comentadas? 
- * R: ...
+ * R: Mars, Jupiter & Venus
+ * Pois Marte permanece sem delay de execução, já Jupiter possui o delay de 2 segundos (2000ms)
+ * e Venus o delay de 3 segundos (3000ms).
  */
