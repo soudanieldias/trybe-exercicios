@@ -15,4 +15,8 @@ const getPlanet = () => {
     console.log("Returned planet: ", mars);
   };
   
-  getPlanet(); // imprime Marte depois de 4 segundos
+  setTimeout(() => console.log('4'), 1000); // Counter
+  setTimeout(() => console.log('3'), 2000); // Counter
+  setTimeout(() => console.log('2'), 3000); // Counter
+  setTimeout(() => console.log('1'), 4000); // Counter
+  setTimeout(() => getPlanet() , 4000); // Delay 4 Segundos
