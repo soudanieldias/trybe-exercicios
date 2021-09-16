@@ -64,7 +64,7 @@ Repositório de Exercícios realizados por __[mim](https://www.linkedin.com/in/s
 - [X] 8.1 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
 - [X] 8.2 - JavaScript ES6 - Higher Order Functions - map e filter
 - [X] 8.3 - JavaScript ES6 - Higher Order Functions - reduce
-- [ ] 8.4 - JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais
+- [X] 8.4 - JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais
 - [ ] 8.5 - Projeto - Zoo functions
 
 ##### Bloco 9: [JavaScript Assíncrono e Promises](https://github.com/soudanieldias/trybe-exercicios/tree/master/01-fundamentos/bloco-09-javascript-assincrono-e-promises)
