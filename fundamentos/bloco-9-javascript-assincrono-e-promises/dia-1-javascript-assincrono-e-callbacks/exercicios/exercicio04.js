@@ -13,5 +13,7 @@
  };
  
  // crie a função sendMarsTemperature abaixo
- 
- sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo
+ const sendMarsTemperature = () => {
+   console.log("Mars temperature is: 20 degree Celsius");
+ }
+ sendMarsTemperature(); // imprime "Mars temperature is: 20 degree Celsius", por exemplo 
