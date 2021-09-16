@@ -18,6 +18,7 @@ const getCountry = (onSuccess) => {
     }
     else {
       const errorMessage = "Country could not be found";
+      printErrorMessage(errorMessage);
     }
   }, delay());
 };
