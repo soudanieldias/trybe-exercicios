@@ -10,16 +10,17 @@ const fetchJoke = () => {
     method: 'GET',
     headers: { 'Accept': 'application/json' }
   };
-
 //   fetch(API_URL, myObject);
   fetch(API_URL, myObject)
     // .then(response => console.log(response));
     .then(response => response.json())
     // .then(data => console.log(data));
-    .then(data => console.log(data.joke));
-
-
-
+    .then(data => {
+      const jokeContainer = document.getElementById('jokeContainer');
+      const par = document.createElement('p');
+      par.innerText = data.joke;
+      // console.log(data.joke);
+    jokeContainer.appendChild(par);
+  });
 };
-
 window.onload = () => fetchJoke();
