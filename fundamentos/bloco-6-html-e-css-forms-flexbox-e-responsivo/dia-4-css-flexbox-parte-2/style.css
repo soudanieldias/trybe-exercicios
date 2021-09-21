@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu';
+  }
+  
+  body {
+    background-color: rgb(247, 247, 247);
+  }
+
+  /*
+  3- Adicione uma propriedade Flexbox que modifique o tamanho padrão do container
+  do menu quando a largura da página for maior que 768px.
+  */
+
+  .header-container {
+    background-color: #5C687C;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+  }
+  /*
+  1- Adicione uma propriedade que defina o tamanho Flexbox base para o container da imagem 268px
+  e para o container do menu 500px.
+  */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    width: 268px;
+    order: -1;
+  }
+  /*
+  2- Adicione uma propriedade Flexbox que modifique a ordem em que a logomarca e os itens do menu aparecem na tela.
+  */
+  .menu-container {
+    display: flex;
+    width: 500px;
+    flex-grow: 1;
+  }
+  /*
+  4- Utilize a propriedade align-self no elemento correto
+  para que o header da página tenha o comportamento.
+  */
+  .menu-container ul {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 100%;
+  }
+  
+  .menu-container li {
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+    list-style: none;
+    margin-right: 10px;
+  }
