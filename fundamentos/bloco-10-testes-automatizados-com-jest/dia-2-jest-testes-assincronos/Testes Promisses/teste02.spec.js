@@ -26,3 +26,7 @@ const Animals = [
       })
     ));
   });
+
+// Quando colocadas () ao invés de {} no Arrow Function do test/it, o mesmo deve aguardar que o
+// teste contido dentro do elemento then seja concluído, para que assim, possa evitar que
+// um Falso Positivo seja retornado à tela do usuário!
