@@ -5,7 +5,7 @@
  */
 
   const uppercase = (str, callback) => {
-    if (!str || !callback) return "String VAZIA!!!";
+    if (!str || !callback) return "Um ou mais argumentos passados são inválidos!";
     setTimeout(() => {
       callback(str.toUpperCase());
     }, 500);
@@ -13,21 +13,20 @@
 
   describe('Testa Função upperCase', () => {
     test('Verifica se passado uma palavra para a função, todas as letras retornam MAIÚSCULAS', done => {
-
+      
       function callback(data) {
-        
         try {
           expect(data).toBe('STRING');
           done();
-
         } catch (error) {
           done(error);
         }
       }
       uppercase('string', callback);
     });
+
     test('Verifica se, nenhum parâmetro foi passado, retorna um ERRO.', () => {
       // const retornoDaFuncao = 
-      expect(uppercase()).toBe("String VAZIA!!!");
+      expect(uppercase()).toBe("Um ou mais argumentos passados são inválidos!");
     })
   });
