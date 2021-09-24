@@ -22,4 +22,9 @@ const users = [
   });
   
   const getUserName = (userId) => findUserById(userId).then((user) => user.name);
-  
+
+  describe('Teste da Função findUserById', () => {
+    test('Verifica se, buscada uma ID, é retornado um objeto com a id e o nome do usuário', () => {
+      getUserName(1).then((data) => expect(data).toEqual('Mark'))
+    });
+  });
