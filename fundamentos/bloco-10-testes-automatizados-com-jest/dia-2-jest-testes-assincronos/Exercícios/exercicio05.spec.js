@@ -16,3 +16,13 @@
  });
 
 // Após escrever o que imagina que será o resultado, execute os testes e veja se acertou.
+
+// RETORNO TEST DA LINHA 9
+// '1 - beforeEach'
+// '1 - test'
+// '1 - afterEach'
+
+// RETORNO TEST DA LINHA 15
+// '2 - beforeEach'
+// '2 - test'
+// '2 - afterEach'
