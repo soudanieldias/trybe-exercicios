@@ -17,12 +17,20 @@
 
 // Após escrever o que imagina que será o resultado, execute os testes e veja se acertou.
 
-// RETORNO TEST DA LINHA 9
-// '1 - beforeEach'
-// '1 - test'
-// '1 - afterEach'
+/**
+ * RETORNO TEST DA LINHA 9
+ * '1 - beforeEach'
+ * '1 - test'
+ * '1 - afterEach'
 
-// RETORNO TEST DA LINHA 15
-// '2 - beforeEach'
-// '2 - test'
-// '2 - afterEach'
+ * RETORNO TEST DA LINHA 1
+
+ * '1 - beforeEach' (CORREÇÃO) *****
+ * '2 - beforeEach'
+ * '2 - test'
+ * '2 - afterEach'
+ * '1 - afterEach' (CORREÇÃO) *****
+ * 
+ * OBS: Funções beforeEach e afterEach, declaradas no escopo global, ou seja, fora de um describe,
+ * serão executadas em todos os escopos locais (testes contidos dentro de cada describe
+*/
