@@ -2,6 +2,7 @@
 import './App.css';
 import HeaderClass from './Header';
 import ContentClass from './Content';
+import FooterClass from './Footer';
 
 // function testeAlert() {
 //   alert("Teste");
@@ -14,6 +15,7 @@ function App() {
         {/* <button type="button" onClick={testeAlert}>Teste</button> */}
         <HeaderClass/>
         <ContentClass/>
+        <FooterClass/>
       </header>
     </div>
   );
