@@ -6,6 +6,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h3>
+          Lista de Tarefas:
+        </h3>
         <TasksClass />
       </header>
     </div>
