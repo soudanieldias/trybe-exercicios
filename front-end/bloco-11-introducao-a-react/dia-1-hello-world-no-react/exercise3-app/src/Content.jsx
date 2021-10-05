@@ -34,6 +34,7 @@ const renderContent = ({ conteudo, status, bloco }) => {
          * Status: Status Atual
          */
         <section>
+            <p>------</p>
             <p>Conteúdo: {conteudo}</p>
             <p>Bloco: {bloco}</p>
             <p>Status: {status}</p>
