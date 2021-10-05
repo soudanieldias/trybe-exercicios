@@ -81,7 +81,7 @@ Repositório de Exercícios realizados por __[mim](https://www.linkedin.com/in/s
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 11: [Introdução à React](https://github.com/soudanieldias/trybe-exercicios/tree/master/02-front-end/bloco-11-introducao-a-react)
-- [ ] 11.1 - Introdução - Front-end
+- [X] 11.1 - Introdução - Front-end
 - [ ] 11.1 - Introdução - React
 - [ ] 11.1 - 'Hello, world!' no React!
 - [ ] 11.2 - Componentes React
