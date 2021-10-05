@@ -34,7 +34,7 @@ const renderContent = ({ conteudo, status, bloco }) => {
          * Status: Status Atual
          */
         <section>
-            <p>------</p>
+            {/* <p>------</p> */}
             <p>Conteúdo: {conteudo}</p>
             <p>Bloco: {bloco}</p>
             <p>Status: {status}</p>
@@ -45,8 +45,7 @@ const renderContent = ({ conteudo, status, bloco }) => {
 class ContentClass extends React.Component {
     render() {
       return (
-          <div id="content">
-            {/*  */}
+          <div className="content">
             {conteudos.map( (conteudo) => renderContent(conteudo))}
           </div>
       );

@@ -11,12 +11,17 @@ import FooterClass from './Footer';
 function App() {
   return (
     <div className="App">
+      {/* <button type="button" onClick={testeAlert}>Teste</button> */}
       <header className="App-header">
-        {/* <button type="button" onClick={testeAlert}>Teste</button> */}
         <HeaderClass/>
-        <ContentClass/>
-        <FooterClass/>
       </header>
+      <main className="App-main">
+      <ContentClass/>
+      </main>
+      <footer className="App-footer">
+        <FooterClass/>
+      </footer>
+      
     </div>
   );
 }
