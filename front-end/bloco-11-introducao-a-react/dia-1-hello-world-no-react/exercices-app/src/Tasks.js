@@ -1,3 +1,5 @@
+import React from 'react';
+
 const taskList =
 [
     'Acordar',
@@ -14,13 +16,16 @@ const taskList =
 
 const Task = (value) => {
   return (
-    `<li>${value}</li>`
+    <li key={value}>{value}</li>
   );
-};
+}
 
-// const listaOrganizada = listaTarefas.sort();
-// console.log(listaOrganizada);
-const createLi = taskList.map( (theTask) => {
-  return Task(theTask);
-});
-console.log(createLi);
+class TasksClass extends React.Component {
+  render() {
+    return (
+      <ul>{ taskList.map( theTask => Task(theTask)) }</ul>
+    );
+  }
+}
+
+export default TasksClass;
