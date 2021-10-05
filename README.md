@@ -75,13 +75,13 @@ Repositório de Exercícios realizados por __[mim](https://www.linkedin.com/in/s
 ##### Bloco 10: [Testes automatizados com Jest](https://github.com/soudanieldias/trybe-exercicios/tree/master/01-fundamentos/bloco-10-testes-automatizados-com-jest)
 - [X] 10.1 - Primeiros passos no Jest
 - [X] 10.2 - Jest - Testes Assíncronos
-- [ ] 10.3 - Jest - Simulando comportamentos
-- [ ] 10.4 - Projeto - Jest Assíncrono e Mocking
+- [X] 10.3 - Jest - Simulando comportamentos
+- [X] 10.4 - Projeto - Jest Assíncrono e Mocking
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 11: [Introdução à React](https://github.com/soudanieldias/trybe-exercicios/tree/master/02-front-end/bloco-11-introducao-a-react)
-- [ ] 11.1 - Introdução - Front-end
+- [X] 11.1 - Introdução - Front-end
 - [ ] 11.1 - Introdução - React
 - [ ] 11.1 - 'Hello, world!' no React!
 - [ ] 11.2 - Componentes React
