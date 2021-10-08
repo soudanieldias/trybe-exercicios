@@ -2,8 +2,9 @@ import React from 'react';
 
 class Greeting extends React.Component {
   render() {
-    
-    return <h1>Hello, {this.props.name} {this.props.lastName}</h1>;
+    const { name, lastName, array } = this.props;
+
+    return <h1>Hello, {name} {lastName} {JSON.stringify(array, null)}</h1>;
   }
 }
 
