@@ -12,7 +12,6 @@ class HeaderClass extends React.Component {
             <p> Key propTexto: {propTexto} </p>
             <p> Key propNumber: {propNumber} </p>
         </div>
-        
         );
     }
 }
@@ -22,6 +21,11 @@ HeaderClass.propTypes = {
         propTexto: PropTypes.string.isRequired,
         propNumber: PropTypes.number.isRequired,
     }),
+}
+
+HeaderClass.defaultProps = {
+    propTexto: "Texto Default",
+    propNumber: "000000",
 }
 
 export default HeaderClass
