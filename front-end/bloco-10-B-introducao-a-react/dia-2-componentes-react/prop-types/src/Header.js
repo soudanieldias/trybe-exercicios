@@ -5,7 +5,11 @@ class Header extends React.Component {
         const allProps = this.props;
         return (
         
-        <h3> Teste {allProps.propTexto} </h3>
+        <div>
+            <h3> Teste de Props </h3>
+            <p> Key propTexto: {allProps.propTexto} </p>
+            <p> Key propNumber: {allProps.propNumber} </p>
+        </div>
         
         );
     }
