@@ -1,18 +1,27 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-class Header extends React.Component {
+class HeaderClass extends React.Component {
     render () {
         const allProps = this.props;
+        const { propTexto, propNumber } = allProps;
         return (
         
         <div>
             <h3> Teste de Props </h3>
-            <p> Key propTexto: {allProps.propTexto} </p>
-            <p> Key propNumber: {allProps.propNumber} </p>
+            <p> Key propTexto: {propTexto} </p>
+            <p> Key propNumber: {propNumber} </p>
         </div>
         
         );
     }
 }
 
-export default Header
+HeaderClass.propTypes = {
+    allProps: PropTypes.shape({
+        propTexto: PropTypes.string.isRequired,
+        propNumber: PropTypes.number.isRequired,
+    }),
+}
+
+export default HeaderClass
