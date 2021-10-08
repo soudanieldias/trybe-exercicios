@@ -29,7 +29,8 @@ class App extends React.Component {
       <div className="App">
         <h1> Orders recently created </h1>
          {/*  adicione os componentes aqui */}
-         <Order order={}/>
+         <Order order={headphone}/>
+         <Order order={energyDrink}/>
       </div>
     );
   }
