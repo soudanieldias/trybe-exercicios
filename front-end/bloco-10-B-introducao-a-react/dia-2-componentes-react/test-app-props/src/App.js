@@ -1,10 +1,11 @@
 import Greeting from './Greeting';
-
+import Composition from './Composition';
 function App() {
-  const arrayProps = ['a', 'b', 'c', 'd', 'e'];
+  // const arrayProps = ['a', 'b', 'c', 'd', 'e'];
   return (
     <main>
-      <Greeting name="Daniel" lastName="Dias" array={arrayProps}/>
+      {/* <Greeting name="Daniel" lastName="Dias" array={arrayProps}/> */}
+      <Composition />
     </main>
   );
 }
