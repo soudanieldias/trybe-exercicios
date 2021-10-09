@@ -47,6 +47,7 @@ class Fixtwo extends React.Component {
     this.setState({
       numberClicks: 0,
       clickState: "Nulo",
+      className: "numberDefault",
     })
   }
   
