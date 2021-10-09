@@ -10,6 +10,7 @@ class Fixtwo extends React.Component {
     this.state = {
       numberClicks: 0,
       clickState: "Nulo",
+      className: "numberDefault",
     }
     this.handleClick = this.handleClick.bind(this);
     this.resetState = this.resetState.bind(this);
@@ -29,6 +30,7 @@ class Fixtwo extends React.Component {
       this.setState((prevState, _props) => ({
         numberClicks: prevState.numberClicks + 1,
         clickState: "Ímpar",
+        className: "numberDefault",
       }));
 
     } else if( actualNumber % 2 !== 0){
@@ -36,6 +38,7 @@ class Fixtwo extends React.Component {
       this.setState((prevState, _props) => ({
         numberClicks: prevState.numberClicks + 1,
         clickState: "Par",
+        className: "numberGreen",
       }));
     }
   }
@@ -55,7 +58,7 @@ class Fixtwo extends React.Component {
             <button onClick={this.handleClick}>Botão ClickListener</button>
             <button onClick={this.resetState}>Reset ClickListener</button>
             <h1>Número Clicks</h1>
-            <p className="numberDefault">{this.state.numberClicks}</p>
+            <p className={this.state.className}>{this.state.numberClicks}</p>
             <p>{this.state.clickState}</p>
         </div>
     )
