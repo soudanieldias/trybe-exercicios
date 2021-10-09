@@ -1,16 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
-// import Fixone from './components/FixOne';
+import Fixone from './Fixone';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        
+        <Fixone />
       </header>
-      <main>
-        {/* <Fixone /> */}
-      </main>
     </div>
   );
 }
