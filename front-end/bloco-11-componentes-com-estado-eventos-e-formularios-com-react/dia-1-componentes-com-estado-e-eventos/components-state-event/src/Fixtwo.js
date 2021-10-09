@@ -4,22 +4,17 @@ class Fixtwo extends React.Component {
   
   // Constructor
   constructor() {
-    super();
-    
+    super();    
     // console.log("Componente sendo construído. [Fix Two]");
-    
     this.state = {
       numberClicks: 0,
     }
-
     this.handleClick = this.handleClick.bind(this);
     this.resetState = this.resetState.bind(this);
   }
 
   // Functions
   handleClick() {
-    // console.log('Clicou no botão!');
-    // console.log(this);
     // this.setState({
     //   numberClicks: 1,
     // });
@@ -34,7 +29,7 @@ class Fixtwo extends React.Component {
   }
   
   render() {
-    console.log(this);
+    // console.log(this);
     return (
         <div>
             <h3>Componentes com Estados e Eventos</h3>
