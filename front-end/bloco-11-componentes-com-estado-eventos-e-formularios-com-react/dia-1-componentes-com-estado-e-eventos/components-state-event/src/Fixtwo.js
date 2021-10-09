@@ -1,4 +1,5 @@
 import React from 'react';
+import './Fixtwo.css';
 
 class Fixtwo extends React.Component {
   
@@ -8,6 +9,7 @@ class Fixtwo extends React.Component {
     // console.log("Componente sendo construído. [Fix Two]");
     this.state = {
       numberClicks: 0,
+      clickState: "Nulo",
     }
     this.handleClick = this.handleClick.bind(this);
     this.resetState = this.resetState.bind(this);
@@ -18,13 +20,30 @@ class Fixtwo extends React.Component {
     // this.setState({
     //   numberClicks: 1,
     // });
-    this.setState((prevState, _props) => ({
-      numberClicks: prevState.numberClicks + 1
-    }));
+    const actualNumber = this.state.numberClicks;
+    // console.log("Previous State:", actualNumber);
+    console.log("Actual State:", actualNumber+1);
+    
+    if( actualNumber % 2 === 0) {
+
+      this.setState((prevState, _props) => ({
+        numberClicks: prevState.numberClicks + 1,
+        clickState: "Ímpar",
+      }));
+
+    } else if( actualNumber % 2 !== 0){
+
+      this.setState((prevState, _props) => ({
+        numberClicks: prevState.numberClicks + 1,
+        clickState: "Par",
+      }));
+    }
   }
+
   resetState() {
     this.setState({
       numberClicks: 0,
+      clickState: "Nulo",
     })
   }
   
@@ -36,7 +55,8 @@ class Fixtwo extends React.Component {
             <button onClick={this.handleClick}>Botão ClickListener</button>
             <button onClick={this.resetState}>Reset ClickListener</button>
             <h1>Número Clicks</h1>
-            <p>{this.state.numberClicks}</p>
+            <p className="numberDefault">{this.state.numberClicks}</p>
+            <p>{this.state.clickState}</p>
         </div>
     )
   }
