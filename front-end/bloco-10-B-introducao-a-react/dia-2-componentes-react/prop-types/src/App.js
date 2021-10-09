@@ -1,5 +1,5 @@
 import './App.css';
-import HeaderClass from "./Header";
+// import HeaderClass from "./Header";
 import Pokedex from './Pokedex';
 
 function App() {
