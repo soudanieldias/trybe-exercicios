@@ -9,12 +9,7 @@ class Pokedex extends React.Component {
                 <div>Div que Renderiza os dados dos Pokémons</div>
                 {/* <div>{pokemons}</div> */}
                 <div>
-                    { pokemons
-                    .map( pokemon => {
-                    <Pokemon pokemon={pokemon}/>
-                    }
-
-                )}
+                    { pokemons.map( pokemon => <Pokemon pokemon={pokemon}/>) }
                 </div>
             </div>
         );
