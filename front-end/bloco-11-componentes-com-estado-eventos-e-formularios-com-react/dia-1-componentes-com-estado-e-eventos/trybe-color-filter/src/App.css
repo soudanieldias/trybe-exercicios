@@ -23,4 +23,17 @@ li {
 
 input {
   font-size: 30px;
+  margin: 5px;
+}
+
+img {
+  width: 400px;
+  margin: 5px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
