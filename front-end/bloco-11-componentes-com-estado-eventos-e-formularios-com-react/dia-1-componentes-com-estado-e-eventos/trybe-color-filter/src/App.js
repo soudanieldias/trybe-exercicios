@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import colors from './colors';
+// import colors from './colors';
+import Colorfilter from './Colorfilter';
 
 function App() {
   return (
@@ -8,15 +9,7 @@ function App() {
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header> */}
-      <input type="text" />
-      <ul>
-        { colors.map( color =>
-        <li key={color.hex}>
-          <div style={{backgroundColor: color.hex }} className="display-color"></div>
-          { color.name }
-        </li>
-        ) }
-      </ul>
+      <Colorfilter />
     </div>
   );
 }
