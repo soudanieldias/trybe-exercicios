@@ -8,6 +8,7 @@ class Colorfilter extends React.Component {
     
     this.state = {
       typedText: '',
+      bgColor: 'none',
     }
     this.handleChange = this.handleChange.bind(this);
   }
@@ -16,14 +17,17 @@ class Colorfilter extends React.Component {
     // console.log(event);
     this.setState({
       typedText: event.target.value,
+      backgroundColor: 'none',
     })
   }
 
   render() {
     return (
-      <div>
+      <div className="main">
         <input onChange={this.handleChange} value={this.state.typedText} type="text" />
-        <img src={imagem}></img>
+        <div style={{backgroundColor: this.state.backgroundColor }} className="virginia">
+        <img src={imagem} alt="Fundo Virgínia"></img>
+        </div>
         <ul>
           { colors.filter( color => color.name.includes(this.state.typedText))
           .map( color =>
