@@ -1,0 +1,22 @@
+.container {
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}
+
+.container .radio {
+  display: flex;
+  flex-direction: row;
+  clear: both;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+}
