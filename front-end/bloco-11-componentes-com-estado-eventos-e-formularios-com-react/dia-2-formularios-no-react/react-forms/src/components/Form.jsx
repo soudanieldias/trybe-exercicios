@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Form.css';
+import Aboutme from './Aboutme';
 import Age from './Age';
 import Email from './Email';
 import Fullname from './Fullname';
@@ -70,6 +71,11 @@ class Form extends React.Component {
               </select>
             </div>
 
+            <div>
+              <label htmlFor="aboutme">Sobre você</label>
+              <textarea name="aboutme" id="aboutme" value={this.state.aboutme} onChange={this.handleChange} cols="30" rows="10"></textarea>
+            </div>
+
             */
             }
 
@@ -81,10 +87,7 @@ class Form extends React.Component {
 
             <Gender value={this.state.gender} handleChange={this.handleChange} />
 
-            <div>
-              <label htmlFor="aboutme">Sobre você</label>
-              <textarea name="aboutme" id="aboutme" value={this.state.aboutme} onChange={this.handleChange} cols="30" rows="10"></textarea>
-            </div>
+            <Aboutme value={this.state.aboutme} handleChange={this.handleChange} />
 
             <div>
               <label htmlFor="check">Finalizado?</label>
