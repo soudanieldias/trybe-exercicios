@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Form.css';
 import Age from './Age';
+import Email from './Email';
 import Fullname from './Fullname';
 
 class Form extends React.Component {
@@ -14,6 +15,7 @@ class Form extends React.Component {
       aboutme: '',
       age: '',
       check: false,
+      email: '',
       fullname: '',
       gender: 'male',
     };
@@ -41,28 +43,31 @@ class Form extends React.Component {
           <fieldset>
             <legend>Candidate-se à Vaga</legend>
             {
-            /* <span>Formulário React!</span> */
+            /*
+            <span>Formulário React!</span>
 
-            /* <div>
+            <div>
               <label htmlFor="fullname">Nome Completo</label>
               <input type="text" name="fullname" id="fullname" autoComplete="off" placeholder="Nome Sobrenome" value={this.state.fullname} onChange={this.handleChange} />
-            </div> */
-
-            /* <div>
+            </div>
+            
+            <div>
               <label htmlFor="age">Idade</label>
               <input type="number" name="age" id="age" min="14" max="55" autoComplete="off" placeholder="14" value={this.state.age} onChange={this.handleChange} />
-            </div> */
-            }
-
-            <Fullname value={this.state.fullname} handleChange={this.handleChange} />
-            
-            <Age value={this.state.age} handleChange={this.handleChange} />
-            
+            </div>
 
             <div>
               <label htmlFor="email">Email</label>
               <input type="email" name="email" id="email" placeholder="email@dominio.com"/>
             </div>
+            */
+            }
+
+            <Fullname value={this.state.fullname} handleChange={this.handleChange} />
+
+            <Age value={this.state.age} handleChange={this.handleChange} />
+            
+            <Email value={this.state.email} handleChange={this.handleChange} />
 
             <div>
               <label htmlFor="gender">Sexo</label>
