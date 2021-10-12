@@ -9,15 +9,18 @@ class Form extends React.Component {
     // this.function = this.function.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
-      fullname: '',
-      age: 0,
       aboutme: '',
+      age: '',
+      check: false,
+      fullname: '',
+      gender: 'male',
     };
   }
 
-  handleChange(event) {
-
-    this.setState({ [event.target.id]: event.target.value });
+  handleChange({target}) {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState({ [name]: value });
 
     // this.setState({
     //   event.target.id: event.target.value,
@@ -42,21 +45,26 @@ class Form extends React.Component {
 
             <div>
             <label htmlFor="age">Idade: </label>
-            <input type="number" name="age" id="age" value={this.state.age} onChange={this.handleChange} />
+            <input type="number" name="age" id="age" min="13" max="100" value={this.state.age} onChange={this.handleChange} />
             </div>
 
             <div>
             {/* <span>Sexo: </span> */}
             <label htmlFor="gender">Sexo: </label>
-            <select name="gender">
+            <select name="gender" value={this.state.gender} onChange={this.handleChange}>
             <option value="male" selected>Masculino</option>
-            <option value="Female">Feminino</option>
+            <option value="female">Feminino</option>
             </select>
             </div>
 
             <div>
             <label htmlFor="aboutme">Sobre você: </label>
             <textarea name="aboutme" id="aboutme" value={this.state.aboutme} onChange={this.handleChange} cols="30" rows="10"></textarea>
+            </div>
+
+            <div>
+            <label htmlFor="check">Finalizado?</label>
+            <input type="checkbox" name="check" id="check" value={this.state.check} onChange={this.handleChange} />
             </div>
 
             <input type="submit" value="Enviar" />
