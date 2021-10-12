@@ -7,16 +7,25 @@ class Form extends React.Component {
     super();
 
     // this.function = this.function.bind(this);
-
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
-      estadoFavorito: '',
+      fullname: '',
+      age: 0,
+      aboutme: '',
     };
   }
 
-  // handleChange(event) {
-  //   this.setState({
-  //     estadoFavorito: event.target.value,
-  //   });
+  handleChange(event) {
+
+    this.setState({ [event.target.id]: event.target.value });
+
+    // this.setState({
+    //   event.target.id: event.target.value,
+    // });
+    // console.log('This: ', this);
+    // console.log('Event: ', event);
+    // console.log('Event: ', event.target.id);
+  }
 
   // Estrutura do Formulário
   render() {
@@ -27,13 +36,13 @@ class Form extends React.Component {
             <span>Formulário React!</span>
 
             <div>
-            <label htmlFor="name">Nome Completo: </label>
-            <input type="text" name="name" id="name" />
+            <label htmlFor="fullname">Nome Completo: </label>
+            <input type="text" name="fullname" id="fullname" value={this.state.fullname} onChange={this.handleChange} />
             </div>
 
             <div>
             <label htmlFor="age">Idade: </label>
-            <input type="number" name="age" id="age" />
+            <input type="number" name="age" id="age" value={this.state.age} onChange={this.handleChange} />
             </div>
 
             <div>
@@ -47,7 +56,7 @@ class Form extends React.Component {
 
             <div>
             <label htmlFor="aboutme">Sobre você: </label>
-            <textarea name="aboutme" id="aboutme" cols="30" rows="10"></textarea>
+            <textarea name="aboutme" id="aboutme" value={this.state.aboutme} onChange={this.handleChange} cols="30" rows="10"></textarea>
             </div>
 
             <input type="submit" value="Enviar" />
