@@ -3,6 +3,7 @@ import '../Form.css';
 import Age from './Age';
 import Email from './Email';
 import Fullname from './Fullname';
+import Gender from './Gender';
 
 class Form extends React.Component {
 
@@ -60,6 +61,15 @@ class Form extends React.Component {
               <label htmlFor="email">Email</label>
               <input type="email" name="email" id="email" placeholder="email@dominio.com"/>
             </div>
+
+            <div>
+              <label htmlFor="gender">Sexo</label>
+              <select name="gender" value={this.state.gender} onChange={this.handleChange}>
+              <option value="male" selected>Masculino</option>
+              <option value="female">Feminino</option>
+              </select>
+            </div>
+
             */
             }
 
@@ -69,13 +79,7 @@ class Form extends React.Component {
             
             <Email value={this.state.email} handleChange={this.handleChange} />
 
-            <div>
-              <label htmlFor="gender">Sexo</label>
-              <select name="gender" value={this.state.gender} onChange={this.handleChange}>
-              <option value="male" selected>Masculino</option>
-              <option value="female">Feminino</option>
-              </select>
-            </div>
+            <Gender value={this.state.gender} handleChange={this.handleChange} />
 
             <div>
               <label htmlFor="aboutme">Sobre você</label>
