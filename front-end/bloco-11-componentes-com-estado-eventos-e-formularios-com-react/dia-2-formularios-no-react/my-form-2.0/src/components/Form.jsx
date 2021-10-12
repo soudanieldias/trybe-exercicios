@@ -25,38 +25,42 @@ class Form extends React.Component {
                 <legend>Dados Pessoais</legend>
 
                 <label htmlFor="name">
-                Nome: <input type="text" name="name" id="name" required />
+                Nome: <input type="text" name="name" id="name" maxLength="40" required />
                 </label>
               
                 <label htmlFor="email">
-                  Email:
-                  <input type="email" name="email" id="email" required />
+                  Email: <input type="email" name="email" id="email" maxLength="50" required />
                 </label>
 
                 <label htmlFor="cpf">
-                  CPF:
-                  <input type="number" name="cpf" id="cpf" required />
+                  CPF: <input type="number" name="cpf" id="cpf" maxLength="11" required />
                 </label>
 
                 <label htmlFor="address">
-                  Endereço: 
-                  <input type="text" name="address" id="address" required />
+                  Endereço: <input type="text" name="address" id="address" maxLength="200" required />
                 </label>
 
                 <label htmlFor="state">
-                  Estado:
-                  <input type="text" name="state" id="state" required />
+                  Estado: <input type="text" name="state" id="state" required />
                 </label>
 
                 <label htmlFor="city">
-                  Cidade: 
-                  <input type="text" name="city" id="city" required />
+                  Cidade: <input type="text" name="city" id="city" maxLength="28" required />
                 </label>
 
-                <label htmlFor="type">
+                {/* <label htmlFor="type">
                   Tipo:
-                  <input type="text" name="type" id="type" required />
-                </label>
+
+                </label> */}
+                <fieldset>
+                  <legend>Tipo</legend>
+
+                  <label htmlFor="type">
+                    Casa <input type="radio" name="type" id="house" />
+                    Apartamento <input type="radio" name="type" id="apartment" />
+                  </label>
+
+                </fieldset>
 
               </fieldset>
 

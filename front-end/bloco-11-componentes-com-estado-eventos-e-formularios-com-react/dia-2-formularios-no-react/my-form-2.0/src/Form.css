@@ -18,8 +18,22 @@ body {
   height: 600px;
   /* width: 500px; */
 }
-.formClass form fieldset {
+
+.formClass form fieldset input {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.formClass form fieldset label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#type {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
 }
