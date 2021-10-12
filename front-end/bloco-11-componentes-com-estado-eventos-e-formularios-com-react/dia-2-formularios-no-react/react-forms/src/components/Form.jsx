@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Form.css';
+import Fullname from './Fullname';
 
 class Form extends React.Component {
 
@@ -40,11 +41,11 @@ class Form extends React.Component {
             <legend>Candidate-se à Vaga</legend>
             {/* <span>Formulário React!</span> */}
 
-            <div>
+            {/* <div>
               <label htmlFor="fullname">Nome Completo</label>
               <input type="text" name="fullname" id="fullname" autoComplete="off" placeholder="Nome Sobrenome" value={this.state.fullname} onChange={this.handleChange} />
-            </div>
-
+            </div> */}
+            <Fullname value={this.state.fullname} handleChange={this.handleChange}/>
             <div>
               <label htmlFor="age">Idade</label>
               <input type="number" name="age" id="age" min="14" max="55" autoComplete="off" placeholder="14" value={this.state.age} onChange={this.handleChange} />
