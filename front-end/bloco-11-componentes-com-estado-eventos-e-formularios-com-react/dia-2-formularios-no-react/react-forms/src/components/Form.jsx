@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Form.css';
+import Age from './Age';
 import Fullname from './Fullname';
 
 class Form extends React.Component {
@@ -39,17 +40,24 @@ class Form extends React.Component {
           <form>
           <fieldset>
             <legend>Candidate-se à Vaga</legend>
-            {/* <span>Formulário React!</span> */}
+            {
+            /* <span>Formulário React!</span> */
 
-            {/* <div>
+            /* <div>
               <label htmlFor="fullname">Nome Completo</label>
               <input type="text" name="fullname" id="fullname" autoComplete="off" placeholder="Nome Sobrenome" value={this.state.fullname} onChange={this.handleChange} />
-            </div> */}
-            <Fullname value={this.state.fullname} handleChange={this.handleChange}/>
-            <div>
+            </div> */
+
+            /* <div>
               <label htmlFor="age">Idade</label>
               <input type="number" name="age" id="age" min="14" max="55" autoComplete="off" placeholder="14" value={this.state.age} onChange={this.handleChange} />
-            </div>
+            </div> */
+            }
+
+            <Fullname value={this.state.fullname} handleChange={this.handleChange} />
+            
+            <Age value={this.state.age} handleChange={this.handleChange} />
+            
 
             <div>
               <label htmlFor="email">Email</label>
