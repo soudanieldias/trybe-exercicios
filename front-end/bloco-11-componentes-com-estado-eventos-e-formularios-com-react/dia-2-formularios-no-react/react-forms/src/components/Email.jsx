@@ -14,6 +14,7 @@ class Email extends React.Component {
             onChange={handleChange}
             placeholder="email@dominio.com"
             autoComplete="off"
+            required
           />
       </div>
     )

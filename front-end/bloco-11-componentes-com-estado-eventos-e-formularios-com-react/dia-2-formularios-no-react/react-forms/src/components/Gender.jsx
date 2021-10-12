@@ -7,7 +7,7 @@ class Gender extends React.Component {
     return (
       <div>
         <label htmlFor="gender">Sexo</label>
-        <select name="gender" value={value} onChange={handleChange}>
+        <select name="gender" value={value} onChange={handleChange} required>
         <option value="male" selected>Masculino</option>
         <option value="female">Feminino</option>
         </select>

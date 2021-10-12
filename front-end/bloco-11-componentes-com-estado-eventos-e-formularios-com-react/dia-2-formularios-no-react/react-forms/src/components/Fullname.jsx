@@ -16,6 +16,7 @@ class Fullname extends React.Component {
             value={value}
             onChange={handleChange}
             maxLength="40"
+            required
         />
       </div>
     );

@@ -17,6 +17,7 @@ class Age extends React.Component {
                 placeholder="14"
                 value={value}
                 onChange={handleChange}
+                required
             />
         </div>
     )

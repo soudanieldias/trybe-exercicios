@@ -13,6 +13,8 @@ class Form extends React.Component {
 
     // this.function = this.function.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.sendForm = this.sendForm.bind(this);
+
     this.state = {
       aboutme: '',
       age: '',
@@ -27,13 +29,11 @@ class Form extends React.Component {
     const { name } = target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     this.setState({ [name]: value });
+  }
 
-    // this.setState({
-    //   event.target.id: event.target.value,
-    // });
-    // console.log('This: ', this);
-    // console.log('Event: ', event);
-    // console.log('Event: ', event.target.id);
+  sendForm(event) {
+    event.preventDefault();
+    console.log(this.state);
   }
 
   // Estrutura do Formulário
@@ -99,7 +99,7 @@ class Form extends React.Component {
               <input type="file" name="file" id="file"/>
             </div>
             
-            <input type="submit" value="Enviar" />
+            <input type="submit" value="Enviar" onClick={this.sendForm} />
           </fieldset>
           </form>
         </div>
