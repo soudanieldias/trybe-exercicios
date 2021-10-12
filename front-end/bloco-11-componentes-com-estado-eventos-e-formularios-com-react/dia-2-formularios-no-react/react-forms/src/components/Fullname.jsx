@@ -15,6 +15,7 @@ class Fullname extends React.Component {
             placeholder="Nome Sobrenome"
             value={value}
             onChange={handleChange}
+            maxLength="40"
         />
       </div>
     );
