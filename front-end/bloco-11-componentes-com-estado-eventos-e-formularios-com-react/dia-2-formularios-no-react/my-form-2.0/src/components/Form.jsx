@@ -55,10 +55,16 @@ class Form extends React.Component {
                 <fieldset>
                   <legend>Tipo</legend>
 
-                  <label htmlFor="type">
-                    Casa <input type="radio" name="type" id="house" />
-                    Apartamento <input type="radio" name="type" id="apartment" />
-                  </label>
+                  <div className="label-radio">
+                    <div>
+                      <label htmlFor="house">Casa</label>
+                      <input type="radio" name="type" id="house" />  
+                    </div>
+                    <div>
+                      <label htmlFor="apartment">Apartamento</label>
+                      <input type="radio" name="type" id="apartment" />  
+                    </div>
+                  </div>
 
                 </fieldset>
 
