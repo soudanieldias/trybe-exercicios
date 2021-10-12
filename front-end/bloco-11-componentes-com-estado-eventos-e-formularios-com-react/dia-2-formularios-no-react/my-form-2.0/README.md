@@ -1,9 +1,9 @@
 # Criando um formulário em React .
 ## Lembra do formulário que você criou usando JavaScript "clássico" ? Vamos criar um parecido em React, e você verá como suas habilidades evoluíram desde então!
 
-    ### Crie um novo projeto, utilizando npx create-react-app my-form-2.0
-    ### Caso julgue necessário, crie estilos CSS para seu formulário, de acordo com a sua imaginação.
-    ### Faça tudo utilizando as abstrações do React .
+### Crie um novo projeto, utilizando npx create-react-app my-form-2.0
+### Caso julgue necessário, crie estilos CSS para seu formulário, de acordo com a sua imaginação.
+### Faça tudo utilizando as abstrações do React .
 
 # Vamos criar um formulário de cadastro de currículo com base na especificação seguintes:
 
@@ -43,7 +43,7 @@ Campo obrigatório
 ### Descrição do cargo - Texto
 Limite de 500 caracteres
 Campo obrigatório
-## Crie um botão que, ao ser clicado, monta uma <div> com o consolidado dos dados que foram inseridos no formulário.
-## Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também.
+## Crie um botão que, ao ser clicado, monta uma `<div>` com o consolidado dos dados que foram inseridos no formulário.
+## Crie um botão Limpar que limpa todos os campos do formulário e a `<div>` com seu currículo também.
 
-# Por último, vá até o formulário que você criou na aula HTML & CSS - Forms e veja as diferenças no código.
+## Por último, vá até o formulário que você criou na aula HTML & CSS - Forms e veja as diferenças no código.
