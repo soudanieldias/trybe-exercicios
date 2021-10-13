@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Form.css';
-import Estados from './Data.json';
+// import Estados from './Data.json';
+import Name from './Name';
 
 class Form extends React.Component {
   
@@ -33,18 +34,8 @@ class Form extends React.Component {
               <fieldset>
                 <legend>Dados Pessoais</legend>
 
-                <label htmlFor="name">
-                Nome: <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        maxLength="40"
-                        value={this.state.name}
-                        onChange={this.handleChange}
-                        required
-                        />
-                </label>
-              
+                <Name value={this.state.name} handleChange={this.handleChange} />
+
                 <label htmlFor="email">
                   Email: <input
                           type="email"
@@ -104,11 +95,20 @@ class Form extends React.Component {
                   <div className="label-radio">
                     <div>
                       <label htmlFor="house">Casa</label>
-                      <input type="radio" name="type" id="house" checked />
+                      <input
+                        type="radio"
+                        name="type"
+                        id="house"
+                        checked
+                      />
                     </div>
                     <div>
                       <label htmlFor="apartment">Apartamento</label>
-                      <input type="radio" name="type" id="apartment" />
+                      <input
+                        type="radio"
+                        name="type"
+                        id="apartment"
+                      />
                     </div>
                   </div>
 
