@@ -1,3 +1,5 @@
+import React from 'react';
+
 class DadJoke extends React.Component {
     constructor() {
       super();
@@ -57,3 +59,5 @@ class DadJoke extends React.Component {
       );
     }
   }
+
+export default DadJoke;
