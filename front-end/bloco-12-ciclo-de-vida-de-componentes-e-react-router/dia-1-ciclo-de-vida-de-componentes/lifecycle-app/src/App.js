@@ -1,4 +1,5 @@
 import './App.css';
+import Counter from './components/Counter';
 import DadJoke from './components/DadJoke';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <DadJoke />
+        <Counter />
       </header>
     </div>
   );
