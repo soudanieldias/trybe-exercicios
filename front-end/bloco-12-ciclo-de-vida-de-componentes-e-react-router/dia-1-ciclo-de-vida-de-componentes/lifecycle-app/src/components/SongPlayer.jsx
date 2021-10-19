@@ -47,7 +47,8 @@ class SongPlayer extends Component {
             "Pause" : 
             "Play"}
         </button>
-        <button disabled={ isStoped } onClick={ (audio) => { this.stopFunc() } }>
+        {/* <button disabled={ isStoped } onClick={ (audio) => { this.stopFunc() } }> */}
+        <button onClick={ (audio) => { this.stopFunc() } }>
           Stop
         </button>
       </div>
