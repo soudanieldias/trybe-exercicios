@@ -4,6 +4,7 @@ class DadJoke extends React.Component {
     constructor() {
       super();
   
+      this.clearJokes = this.clearJokes.bind(this);
       this.saveJoke = this.saveJoke.bind(this);
       this.renderJokeElement = this.renderJokeElement.bind(this);
   
@@ -30,16 +31,24 @@ class DadJoke extends React.Component {
     saveJoke() {
       //Salvando a piada no array de piadas existentes
       const { jokeObj, storedJokes } = this.state;
-      this.setState({ storedJokes: [...storedJokes, jokeObj] }, this.componentDidMount() ) //simple value
+      this.setState({ storedJokes: [...storedJokes, jokeObj] }, this.componentDidMount() )
       // storedJokes.push(jokeObj);
     }
-  
+
+    clearJokes() {
+      const { storedJokes } = this.state;
+      this.setState({ storedJokes: [] }, this.componentDidMount() )
+    }
+
     renderJokeElement() {
       return (
         <div>
           <p>{this.state.jokeObj.joke}</p>
           <button type="button" onClick={this.saveJoke}>
             Salvar piada!
+          </button>
+          <button type="button" onClick={this.clearJokes}>
+            Limpar piadas!
           </button>
         </div>
       );
