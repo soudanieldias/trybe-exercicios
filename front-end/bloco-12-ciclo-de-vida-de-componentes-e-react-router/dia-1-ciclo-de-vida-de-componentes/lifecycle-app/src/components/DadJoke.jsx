@@ -29,7 +29,9 @@ class DadJoke extends React.Component {
   
     saveJoke() {
       //Salvando a piada no array de piadas existentes
-  
+      const { jokeObj, storedJokes } = this.state;
+      this.setState({ storedJokes: [...storedJokes, jokeObj] }, this.componentDidMount() ) //simple value
+      // storedJokes.push(jokeObj);
     }
   
     renderJokeElement() {
@@ -44,9 +46,9 @@ class DadJoke extends React.Component {
     }
   
     render() {
-      const { storedJokes } = this.state;
+      const { storedJokes, jokeObj } = this.state;
       const loadingElement = <span>Loading...</span>;
-  
+
       return (
         <div>
           <span>
@@ -54,7 +56,8 @@ class DadJoke extends React.Component {
           </span>
   
         <span>RENDERIZAÇÃO CONDICIONAL</span>
-  
+        {/* {!this.state.jokeObj } */}
+        { jokeObj && this.renderJokeElement() }
         </div>
       );
     }
