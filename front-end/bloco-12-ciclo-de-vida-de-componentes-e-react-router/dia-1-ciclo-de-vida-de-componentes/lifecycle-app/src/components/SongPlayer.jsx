@@ -29,7 +29,9 @@ class SongPlayer extends Component {
             "Song is Paused"}
         </p>
         <button onClick={this.playPause}>
-          Play | Pause
+            {this.state.isPlaying ? 
+            "Pause" : 
+            "Play"}
         </button>
       </div>
     );
