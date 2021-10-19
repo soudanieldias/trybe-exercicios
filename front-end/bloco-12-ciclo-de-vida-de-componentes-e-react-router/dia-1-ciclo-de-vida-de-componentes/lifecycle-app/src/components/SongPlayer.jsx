@@ -21,15 +21,17 @@ class SongPlayer extends Component {
   };
 
   render() {
+    const { isPlaying } = this.state;
+    const textSong = song.slice(14,30);
     return (
       <div>
         <p>
-          {this.state.isPlaying ? 
-            "Song is Playing" : 
-            "Song is Paused"}
+          {isPlaying ? 
+            `Song ${textSong} is Playing` : 
+            `Song ${textSong} is Paused`}
         </p>
         <button onClick={this.playPause}>
-            {this.state.isPlaying ? 
+            {isPlaying ? 
             "Pause" : 
             "Play"}
         </button>
