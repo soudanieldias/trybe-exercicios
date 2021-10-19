@@ -1,4 +1,5 @@
 import React from "react";
+import './RickAndMorty.css';
 
 class RickAndMorty extends React.Component {
   constructor(props){
@@ -19,16 +20,16 @@ class RickAndMorty extends React.Component {
   render() {
     const { characters } = this.state;
     return (
-      <div className="App">
+      <div className="main-content">
         <h1>
           Ricky and Morty Characters:
         </h1>
-        <div>
+        <div className="characters-content" >
           { characters.map( character => {
             return (
               <div className="div-characters" key={character.name} >
                 <h3> { character.name}</h3>
-                <img src={character.image} />
+                <img src={character.image} alt={character.name} />
                 <p>Status: {character.status}</p>
                 <p>Species: {character.species}</p>
                 <p>Origin: {character.origin.name}</p>
