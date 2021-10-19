@@ -33,8 +33,10 @@ class SongPlayer extends Component {
   }
 
   render() {
-    const { isPlaying, isStoped } = this.state;
-    const textSong = song.slice(14,30);
+    // const { isPlaying, isStoped } = this.state;
+    // const textSong = song.slice(14,30);
+    const { isPlaying } = this.state;
+    const textSong = song.slice(14,song.lenght);
     return (
       <div>
         <p>
