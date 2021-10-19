@@ -1,12 +1,14 @@
 import './App.css';
-import Counter from './components/Counter';
-import DadJoke from './components/DadJoke';
+import RickAndMorty from './components/RickAndMorty';
+// import Counter from './components/Counter';
+// import DadJoke from './components/DadJoke';
 
 function App() {
   return (
     <div className="App">
-        <DadJoke />
-        <Counter />
+        <RickAndMorty />
+        {/* <DadJoke /> */}
+        {/* <Counter /> */}
     </div>
   );
 }
