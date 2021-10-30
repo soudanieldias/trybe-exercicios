@@ -17,6 +17,10 @@ function App() {
         >
           Learn React
         </a>
+        <label htmlFor="id-email">
+        Email
+        <input id="id-email" type="email" />
+      </label>
       </header>
     </div>
   );

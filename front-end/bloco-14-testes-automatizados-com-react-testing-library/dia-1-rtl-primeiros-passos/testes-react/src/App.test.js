@@ -6,3 +6,10 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+test('Verificando se existe o campo Email.', () => {
+  render(<App />);
+  const inputEmail = screen.getByLabelText('Email');
+  expect(inputEmail).toBeInTheDocument();
+  expect(inputEmail).toHaveProperty('type', 'email');
+});
