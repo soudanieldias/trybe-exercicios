@@ -22,6 +22,7 @@
       <p>Cidade: <span id="cidade-2">São Paulo</span></p>
     </div>
     <script>
+
       const ESTADO_INICIAL_1 = {
         nome: 'Rodrigo',
         sobrenome: 'Santos da Silva',
@@ -83,6 +84,7 @@
           });
         }, 2000);
       };
+
       store.subscribe(() => {
         const { meuPrimeiroReducer, meuSegundoReducer } = store.getState();
         document.getElementById('nome-1').innerHTML = meuPrimeiroReducer.nome;
@@ -91,6 +93,7 @@
         document.getElementById('nome-2').innerHTML = meuSegundoReducer.nome;
         document.getElementById('sobrenome-2').innerHTML = meuSegundoReducer.sobrenome;
     });
+
     </script>
   </body>
 </html>
