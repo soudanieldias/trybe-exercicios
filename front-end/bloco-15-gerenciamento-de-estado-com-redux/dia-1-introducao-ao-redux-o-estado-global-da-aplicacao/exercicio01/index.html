@@ -80,6 +80,10 @@
       store.dispatch({ type: 'PREVIOUS_COLOR' });
     });
 
+    document.getElementById('random').addEventListener('click', () => {
+      store.dispatch({ type: 'RANDOM_COLOR' });
+    });
+
     const store = Redux.createStore(mainReducer);
 
     store.subscribe(() => {
