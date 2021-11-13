@@ -27,7 +27,7 @@ const ESTADO_INICIAL_1 = {
 
   const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
     switch (action.type) {
-      case 'ATUALIZAR_NOME_DOIS':ESTADO_INICIAL_1
+      case 'ATUALIZAR_NOME_DOIS':
         return {
           ...state,
           nome: action.nome,
