@@ -64,7 +64,7 @@
         case 'RANDOM_COLOR':
           return {
             ...state,
-            colors: [...state.colors, criarCor()],
+            colors: [...state.colors, geraCor()],
             index: state.colors.length,
           };
         default:
