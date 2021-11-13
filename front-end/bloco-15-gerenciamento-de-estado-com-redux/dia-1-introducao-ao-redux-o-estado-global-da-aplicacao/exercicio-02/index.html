@@ -67,7 +67,22 @@
         meuSegundoReducer,
       });
 
-      const store = createStore(reducers);
+      const store = Redux.createStore(reducers);
+
+      window.onload = () => {
+        setTimeout(() => {
+          store.dispatch({
+            type: 'ATUALIZAR_NOME_UM',
+            nome: 'Bruna',
+            sobrenome: 'Santana Oliveira',
+          });
+          store.dispatch({
+            type: 'ATUALIZAR_NOME_DOIS',
+            nome: 'Rodrigo',
+            sobrenome: 'Santos da Silva',
+          });
+        }, 2000);
+      };
     </script>
   </body>
 </html>
