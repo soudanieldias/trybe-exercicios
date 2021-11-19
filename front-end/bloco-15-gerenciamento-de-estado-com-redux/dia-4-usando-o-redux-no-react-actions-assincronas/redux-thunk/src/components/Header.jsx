@@ -17,5 +17,6 @@ class Header extends Component {
 const mapStateToProps = (state) => ({
   defaultState: state.reducer.defaultState,
 });
+
 export default connect(mapStateToProps)(Header);
 // export default Header;
