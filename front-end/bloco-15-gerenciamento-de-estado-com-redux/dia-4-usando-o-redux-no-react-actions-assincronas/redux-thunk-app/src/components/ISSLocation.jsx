@@ -3,11 +3,17 @@ import { Map, Marker } from 'pigeon-maps';
 
 class ISSLocation extends Component {
   render() {
-    const Latitude = 0;
-    const Longitude = 0;
+    const {
+      latitude,
+      longitude,
+    } = this.props;
 
     return (
         <main>
+          <div className="Header">
+            LATITUDE: { latitude }
+            LONGITUDE: { longitude }
+          </div>
           <div className="map">
             <Map
               center={ [0, 0] }
@@ -17,7 +23,7 @@ class ISSLocation extends Component {
               maxZoom={ 8 }
               zoom={ 1.5 }
             >
-              <Marker anchor={ [Latitude, Longitude] } />
+              <Marker anchor={ [latitude, longitude] } />
             </Map>
             
           </div>
@@ -26,4 +32,8 @@ class ISSLocation extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  latitude: state.coordinatesReducer.longitude,
+  longitude: state.coordinatesReducer.longitude
+})
 export default ISSLocation;
