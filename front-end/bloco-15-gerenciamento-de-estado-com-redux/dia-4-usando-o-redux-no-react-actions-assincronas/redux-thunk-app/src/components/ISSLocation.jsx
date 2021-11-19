@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Map, Marker } from 'pigeon-maps';
 import { connect } from 'react-redux';
 import { requestISSLocationThunk } from '../store/actions';
-import getCurrentISSLocation from '../services/ISSApi';
 
 class ISSLocation extends Component {
   componentDidMount() {
