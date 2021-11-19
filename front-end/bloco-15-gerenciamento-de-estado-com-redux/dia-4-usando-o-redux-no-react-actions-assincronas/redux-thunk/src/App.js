@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import store from './store/';
 import { Provider } from 'react-redux';
 import Header from './components/Header';
+
 function App() {
   return (
     <Provider store={ store }>
