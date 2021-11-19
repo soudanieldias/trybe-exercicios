@@ -1,9 +1,11 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import store from './store/';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={ store }>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,7 +20,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </Provider>
   );
 }
 
