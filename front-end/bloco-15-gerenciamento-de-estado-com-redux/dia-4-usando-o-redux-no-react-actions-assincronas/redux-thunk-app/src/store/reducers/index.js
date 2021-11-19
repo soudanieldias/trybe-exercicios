@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { REQUEST_ISS_LOCATION, REQUEST_ISS_LOCATION_SUCCESS, REQUEST_ISS_LOCATION_ERROR } from '../actions';
+import { REQUEST_ISS_LOCATION_SUCCESS } from '../actions';
 import coordinatesReducer from './coordinates';
 
 const INITIAL_STATE = {
