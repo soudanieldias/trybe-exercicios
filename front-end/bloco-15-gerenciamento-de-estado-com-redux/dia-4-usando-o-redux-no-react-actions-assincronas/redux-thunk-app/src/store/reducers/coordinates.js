@@ -1,6 +1,6 @@
 const INITIAL_STATE = {
-    Latitude: 0,
-    Longitude: 0,
+    latitude: 0,
+    longitude: 0,
 }
 
 const coordinatesReducer = (state = INITIAL_STATE, action) => {
