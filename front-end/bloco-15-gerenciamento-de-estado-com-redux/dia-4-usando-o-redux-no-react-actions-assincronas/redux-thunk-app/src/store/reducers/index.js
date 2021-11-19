@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { CHANGE_DEFAULT } from '../actions';
+import { REQUEST_ISS_LOCATION, REQUEST_ISS_LOCATION_SUCCESS, REQUEST_ISS_LOCATION_ERROR } from '../actions';
 import coordinatesReducer from './coordinates';
 
 const INITIAL_STATE = {
@@ -10,10 +10,11 @@ const INITIAL_STATE = {
 const mainReducer = (state = INITIAL_STATE, action) => {
   // Add Action Switchers Here
   switch (action.type) {
-    case CHANGE_DEFAULT:
+    case REQUEST_ISS_LOCATION_SUCCESS:
       return {
         ...state,
-        defaultState: action.payload
+        latitude: action.payload.latitude,
+        longitude: action.payload.longitude,
       };
     default:
       return state;
