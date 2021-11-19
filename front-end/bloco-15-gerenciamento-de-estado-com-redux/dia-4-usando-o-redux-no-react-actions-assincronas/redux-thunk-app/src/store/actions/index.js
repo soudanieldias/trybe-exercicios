@@ -21,3 +21,17 @@ export function requestISSLocationError(payload) {
     payload,
   };
 }
+
+export function requestISSLocationThunk() {
+  return (dispatch) => {
+    getCurrentISSLocation()
+      .then((response) => {
+        const coordinates = {
+          latitude: Number(response.iss_position.latitude),
+          longitude: Number(response.iss_position.longitude),
+        };
+
+        dispatch(requestISSLocationSuccess(coordinates));
+      });
+  };
+}
