@@ -22,7 +22,7 @@ class ISSLocation extends Component {
         <main>
           <div className="Header">
             LATITUDE: { latitude }
-            LONGITUDE: { longitude }
+            <br />LONGITUDE: { longitude }
           </div>
           <div className="map">
             <Map
@@ -33,7 +33,12 @@ class ISSLocation extends Component {
               maxZoom={ 8 }
               zoom={ 1.5 }
             >
-              <Marker anchor={ [latitude, longitude] } />
+              {/* <Marker anchor={ [latitude, longitude] } /> */}
+              <Marker
+                width={50}
+                anchor={[latitude, longitude]}
+                color="blue"
+      />
             </Map>
             
           </div>
@@ -43,7 +48,7 @@ class ISSLocation extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  latitude: state.coordinates.longitude,
+  latitude: state.coordinates.latitude,
   longitude: state.coordinates.longitude,
 })
 
