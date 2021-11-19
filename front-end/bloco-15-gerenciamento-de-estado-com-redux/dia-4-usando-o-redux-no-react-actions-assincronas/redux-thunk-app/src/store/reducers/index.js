@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
 import { CHANGE_DEFAULT } from '../actions';
+import coordinatesReducer from './coordinates';
 
 const INITIAL_STATE = {
   // Add Initial State Here
   defaultState: 'Default',
 }
 
-const reducer = (state = INITIAL_STATE, action) => {
+const mainReducer = (state = INITIAL_STATE, action) => {
   // Add Action Switchers Here
   switch (action.type) {
     case CHANGE_DEFAULT:
@@ -19,6 +20,6 @@ const reducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-const rootReducer = combineReducers({reducer});
+const rootReducer = combineReducers(mainReducer, coordinatesReducer);
 
 export default rootReducer;
