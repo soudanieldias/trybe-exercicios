@@ -21,6 +21,6 @@ const mainReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-const rootReducer = combineReducers(mainReducer, coordinatesReducer);
+const rootReducer = combineReducers({ mainReducer, coordinates: coordinatesReducer });
 
 export default rootReducer;

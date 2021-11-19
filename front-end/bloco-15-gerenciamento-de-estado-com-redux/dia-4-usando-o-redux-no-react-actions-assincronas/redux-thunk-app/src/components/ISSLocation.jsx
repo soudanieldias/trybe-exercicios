@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map, Marker } from 'pigeon-maps';
+import { connect } from 'react-redux';
 
 class ISSLocation extends Component {
   render() {
@@ -33,7 +34,8 @@ class ISSLocation extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  latitude: state.coordinatesReducer.longitude,
-  longitude: state.coordinatesReducer.longitude
+  latitude: state.coordinates.longitude,
+  longitude: state.coordinates.longitude,
 })
-export default ISSLocation;
+
+export default connect(mapStateToProps)(ISSLocation);
