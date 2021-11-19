@@ -48,7 +48,7 @@ class ISSLocation extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  latitude: state.coordinates.latitlongiude,
+  latitude: state.coordinates.latitude,
   longitude: state.coordinates.longitude,
 });
 
