@@ -17,7 +17,7 @@ class Test01 extends Component {
   render() {
     const money = { value: 1000000, currency: 'R$' };
     return(
-      <ContextTest.Provider value={money.value}>
+      <ContextTest.Provider value={money}>
         <div>
           <p>ARQUIVO: Test01</p>
           <Test01Child />

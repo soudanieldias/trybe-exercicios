@@ -20,7 +20,8 @@ class Test01Child extends Component {
           /* renderiza algo utilizando o valor recebido do contexto */
           return (
             <div>
-              Teste { value.toFixed(2) }
+              { value.currency }
+              { value.value.toFixed(2) }
             </div>
           );
           }}
