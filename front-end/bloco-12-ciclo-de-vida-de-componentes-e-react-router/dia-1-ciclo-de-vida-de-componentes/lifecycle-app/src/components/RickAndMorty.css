@@ -1,0 +1,33 @@
+ * {
+  margin: 0;
+  padding: 10;
+}
+
+.main-content {
+  display: inline-block;
+}
+
+.characters-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.div-characters {
+  height: 440px;
+  width: 440px;
+  border: 1px solid black;
+  margin: 3px;
+  background: rgba(150, 140, 150, 0.30);
+  display: inline;
+}
+
+.div-characters > * {
+  margin: 3px;
+  border-radius: 30px;
+}
+
+/* Propriedades de Efeito */
+
+.div-characters:hover {
+  border: 2px solid yellow;
+}

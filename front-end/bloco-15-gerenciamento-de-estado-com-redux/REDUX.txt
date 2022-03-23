@@ -1,0 +1,100 @@
+Como utilizar estados em REDUX:
+---------------------------------------------------------
+
+1º Passo (INICIALIZAR UM PROJETO):
+-> [TERMINAL] >>> npm init -y
+
+---------------------------------------------------------
+
+2º Passo (INSTALAR O REDUX NA PASTA DO PROJETO):
+-> [TERMINAL] >>> npm install --save redux
+
+-> (INSTALAÇÕES OPCIONAIS):
+-> [TERMINAL] >>> npm install --save react-redux
+-> [TERMINAL] >>> npm install --save-dev redux-devtools
+
+---------------------------------------------------------
+
+3º Passo (IMPORTAR A BIBLIOTECA NO ARQUIVO):
+
+const Redux = require('redux');
+
+---------------------------------------------------------
+
+4º Passo (ESTRUTURAR UM ESTADO INICIAL):
+
+const INITIAL_STATE = {
+  chave_01: "valor_01",
+  chave_02: "valor_02",
+};
+
+---------------------------------------------------------
+
+5º Passo (DEFINIR UMA ACTION):
+
+const doLogin = (email) => ({
+    type: "LOGIN",              <-- TIPO DE AÇÃO
+    email                       <-- O QUE ESTA AÇÃO MANIPULA
+});
+
+---------------------------------------------------------
+
+6º Passo (CRIAR UMA FUNÇÃO REDUCER PARA AQUELE ESTADO ):
+
+const reducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case "LOGIN":
+      return {
+        ...state,
+        login: !state.login,
+        email: action.email,
+      };
+    default: // No switch, sempre precisamos ter um caso default!
+      return state;
+  }
+};
+
+- A função reducer, é um switch case, que define o estado que será
+    retornado, de acordo com o tipo de ação declarada na action.
+
+---------------------------------------------------------
+
+7º Passo (CRIE A STORE PARA A FUNÇÃO REDUCER):
+
+***** POR DOT NOTATION *****
+
+const store = Redux.createStore(reducer);
+
+***** POR DESESTRUTURAÇÃO *****
+
+import { createStore } from 'redux'
+const store = createStore(reducer);
+
+- A store armazena o reducer da action
+
+---------------------------------------------------------
+
+8º Passo (MANIPULE O ESTADO SALVO NO STORE):
+
+store.dispatch(doLogin("alguem@email.com"));
+
+- O store.dispatch envia a função que contém o tipo de ação
+    a ser executada, e o dado a ser alterado no reducer;
+- A action definida no reducer fará todo o processo de modificação
+    do estado do REDUX;
+
+---------------------------------------------------------
+
+9º Passo (PARA VERIFICAR O ESTADO ARMAZENADO NO STORE):
+
+store.getState()
+
+- a função store.getState() retora o objeto estado do REDUX, contendo todos os dados
+
+---------------------------------------------------------
+nº Passo ():
+->
+---------------------------------------------------------
+nº Passo ():
+->
+---------------------------------------------------------
