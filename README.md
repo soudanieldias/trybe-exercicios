@@ -129,19 +129,19 @@ Repositório de Exercícios realizados por __[mim](https://www.linkedin.com/in/s
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ##### Bloco 20: [Introdução à SQL](https://github.com/soudanieldias/trybe-exercicios/tree/master/03-back-end/bloco-20-introducao-a-sql)
-- [ ] 20.1 - Introdução - Back-end
-- [ ] 20.1 - Introdução - Bancos de dados relacionais
-- [ ] 20.1 - Banco de dados SQL
-- [ ] 20.2 - Encontrando dados em um banco de dados
-- [ ] 20.3 - Filtrando dados de forma específica
-- [ ] 20.4 - Manipulando tabelas
-- [ ] 20.5 - Projeto - All For One
+- [X] 20.1 - Introdução - Back-end
+- [X] 20.1 - Introdução - Bancos de dados relacionais
+- [X] 20.1 - Banco de dados SQL
+- [X] 20.2 - Encontrando dados em um banco de dados
+- [X] 20.3 - Filtrando dados de forma específica
+- [X] 20.4 - Manipulando tabelas
+- [X] 20.5 - Projeto - All For One
 
 ##### Bloco 21: [Funções SQL, Joins e Subqueries](https://github.com/soudanieldias/trybe-exercicios/tree/master/03-back-end/bloco-21-funcoes-sql-joins-e-subqueries)
-- [ ] 21.1 - Funções mais usadas no SQL
-- [ ] 21.2 - Descomplicando JOINs e UNIONs
-- [ ] 21.3 - Stored Routines & Subqueries
-- [ ] 21.4 - Projeto - Vocabulary Booster
+- [X] 21.1 - Funções mais usadas no SQL
+- [X] 21.2 - Descomplicando JOINs e UNIONs
+- [X] 21.3 - Stored Routines & Subqueries
+- [X] 21.4 - Projeto - One For All
 
 ##### Bloco 22: [Normalização e Modelagem de Banco de Dados](https://github.com/soudanieldias/trybe-exercicios/tree/master/03-back-end/bloco-22-normalizacao-e-modelagem-de-banco-de-dados)
 - [ ] 22.1 - Transformando ideias em um modelo de banco de dados
