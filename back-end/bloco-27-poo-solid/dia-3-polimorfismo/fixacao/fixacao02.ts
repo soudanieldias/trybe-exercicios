@@ -58,7 +58,7 @@ class LocalDbModel implements IModel {
 // Crie uma classe CharacterService que recebe como dependência em seu construtor
 // uma instância do tipo LocalDbModel e a utilize em sua lógica de negócio.
 class CharacterService {
-  constructor(readonly model: LocalDbModel) { }
+  constructor(readonly model: IModel) { }
   async create(character: Character) {
     const newCharacter = await this.model.create(character);
     return ({ status: 201, data: newCharacter });
