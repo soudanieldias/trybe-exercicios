@@ -1,0 +1,59 @@
+// Operador $all
+// Seleciona todos os documentos em que o valor do campo é um array que contenha todos os elementos especificados.
+// É equivalente ao $and, só que para arrays
+// EX:
+
+// Retorna os elementos que satisfaça EXATAMENTE os termos pesquisados (Idêntico);
+  -> db.inventory.find({ tags: ["red", "blank"] });
+
+// Retorna os elementos que satisfaçam TODOS os termos pesquisados (Contém Todos);
+// Independente dos demais valores e suas ordens;
+  -> db.inventory.find({ tags: { $all: ["red", "blank"] } });
+
+// Outro Exemplo:
+  -> db.inventory.find({ tags: { $all: [ "ssl", "security" ] } });
+// Equivalência:
+  -> db.inventory.find({ $and: [{ tags: "ssl" }, { tags: "security" }]});
+
+// Levando como exemplo os seguintes dados:
+  -> [{ _id: 1, results: [82, 85, 88] }, { _id: 2, results: [75, 88, 89] }];
+// Ao executar a busca:
+  -> db.scores.find({ results: { $elemMatch: { $gte: 80, $lt: 85 } } });
+// Será retornado o elemento de _id: 1, pois satisfaz as duas condições ( >= 80 ) && ( < 85 )
+
+// Comparando o Valor do Campo
+// Retorna os Campos cujo o valor de spent exceda o valor de budget
+  -> db.monthlyBudget.find({ $expr: { $gt: [ "$spent", "$budget" ] }});
+
+// Operador REGEX:
+[
+  { _id: 100, sku: "abc123", description: "Single line description." },
+  { _id: 101, sku: "abc789", description: "First line\nSecond line" },
+  { _id: 102, sku: "xyz456", description: "Many spaces before     line" },
+  { _id: 103, sku: "xyz789", description: "Multiple\nline description" }
+]
+
+// Considerando os Campos Acima
+// O operador de $regex abaixo irá buscar e retorna os valores cujos campos sku sejam terminados em "789";
+  -> db.products.find({ sku: { $regex: /789$/ } });
+// OBS: Equivalente ao comando LIKE
+  -> SELECT * FROM products WHERE sku LIKE "%789";
+
+// Utilizando um caseSensitive
+// Retorna apenas os valores que possuem "ABC" no sku, sem se importar com "ABC" ser maiúsculo ou não;
+  -> db.products.find({ sku: { $regex: /^ABC/i } });
+
+
+// Operador $mod (Módulo)
+
+[
+  { _id: 1, item: "abc123", qty: 0 },
+  { _id: 2, item: "xyz123", qty: 5 },
+  { _id: 3, item: "ijk123", qty: 12 }
+]
+
+// Considerando os Campos Acima
+// Retorna apenas os valores que o módulo de qty retorne 0
+  -> db.inventory.find({ qty: { $mod: [4, 0] } });
+
+// Serão Retornados: [{ "_id" : 1, "item" : "abc123", "qty" : 0 }, { "_id" : 3, "item" : "ijk123", "qty" : 12 }]
