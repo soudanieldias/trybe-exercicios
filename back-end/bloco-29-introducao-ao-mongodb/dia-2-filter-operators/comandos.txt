@@ -1,0 +1,110 @@
+// Busca por Filtro
+
+// Buscando na coleção inventory os elementos que possuem no atributo "qty" o valor menor que 20
+-> db.inventory.find({ qty: { $lt: 20 } });
+
+// Menor ou igual a 20
+-> db.inventory.find({ qty: { $lte: 20 } });
+
+// Maior que 20;
+-> db.inventory.find({ qty: { $gt: 20 } });
+
+// Maior ou igual a 20;
+-> db.inventory.find({ qty: { $gte: 20 } });
+
+// igual à 20;
+-> db.inventory.find({ qty: { $eq: 20 } });
+
+// Equivalente a 20 (SEJA NÚMERO OU STRING);
+-> db.inventory.find({ qty: { $eq: 20 } });
+
+// Não é igual a 20 (!==), (incluindo os que não possuem o atributo qty);
+-> db.inventory.find({ qty: { $ne: 20 } });
+
+// Esta contido em (É um dos elementos), (qty === 5 || qty === 15);
+-> db.inventory.find({ qty: { $in: [ 5, 15 ] } });
+
+// Que não está contido em um dos elementos. (incluindo os que não possuem o atributo qty);
+-> db.inventory.find( { qty: { $nin: [ 5, 15 ] } } );
+
+************************************
+
+// Operador $exists { campo: { $exists: <boolean> } }
+
+// Retorna todos os elementos cujo Campo qty existe no atributo da collection
+  -> db.inventory.find({ qty: { $exists: true } });
+
+// Combinação de Operadores
+// Retorna todos os elementos cujo Campo qty existe e não esteja contido em [ 5, 15 ]
+  -> db.inventory.find({ qty: { $exists: true, $nin: [ 5, 15 ] } })
+
+************************************
+
+// Operador $not
+// { campo: { $not: { <operador ou expressão> } } }
+
+// Essa consulta seleciona todos os documentos na coleção inventory em que o valor do atributo price
+// é menor ou igual a 1.99 (em outras palavras, não é maior que 1.99), ou em que o atributo price não existe.
+// IMPORTANTE: a expressão { $not: { $gt: 1.99 } } retorna um resultado diferente do operador $lte.
+// Ao utilizar { $lte: 1.99 }, os documentos retornados serão somente aqueles em que o campo price existe
+// e cujo valor é menor ou igual a 1.99.
+  -> db.inventory.find({ price: { $not: { $gt: 1.99 } } })
+
+************************************
+
+// Operador $or
+// O operador $or executa a operação lógica OU em um array de uma ou mais expressões e seleciona
+// os documentos que satisfaçam ao menos uma das expressões.
+  -> { $or: [{ <expression1> }, { <expression2> }, ... , { <expressionN> }] };
+
+// Essa consulta seleciona todos os documentos da coleção inventory em que o valor do atributo qty
+// é menor do que 20 ou o valor do atributo price é igual a 10.
+  -> db.inventory.find({ $or: [{ qty: { $lt: 20 } }, { price: 10 }] });
+
+************************************
+
+// Operador $nor
+// O operador $nor também executa uma operação lógica de NEGAÇÃO, porém, em um array de uma ou mais expressões,
+// e seleciona os documentos em que todas essas expressões falhem, ou seja,
+// seleciona os documentos em que todas as expressões desse array sejam falsas.
+  -> { $nor: [ { <expressão1> }, { <expressão2> }, ...  { <expressãoN> } ] }
+
+// Essa query retorna todos os documentos da coleção inventory que:
+// Contêm o atributo price com o valor diferente de 1.99 e o atributo sale com o valor diferente de true;
+// Ou contêm o atributo price com valor diferente de 1.99 e não contêm o atributo sale;
+// Ou não contêm o atributo price e contêm o atributo sale com valor diferente de true;
+// Ou não contêm o atributo price e nem o atributo sale.
+  -> db.inventory.find({ $nor: [{ price: 1.99 }, { sale: true }] })
+
+************************************
+
+// Operador $and
+// Executa a lógica &, e seleciona todos os elementos que satisfaçam todas as expressões no array;
+
+// Essa consulta seleciona todos os documentos da coleção inventory em que o valor do atributo price
+// é diferente de 1.99 e o atributo price existe.
+  -> { $and: [{ <expressão1> }, { <expressão2> } , ... , { <expressãoN> }] }
+  -> db.inventory.find({
+    $and: [
+      { price: { $ne: 1.99 } },
+      { price: { $exists: true } }
+    ]
+  });
+
+
+// Essa consulta seleciona todos os documentos da coleção inventory em que o valor do campo price
+// é maior que 0.99 e menor que 1.99, E o valor do atributo sale é igual a true,
+// OU o valor do atributo qty é menor do que 20. Ou seja, essa expressão é equivalente a (price > 0.99 E price < 1.99)
+// (onde o E está implícito na vírgula aqui { $gt: 0.99, $lt: 1.99 }) E (sale = true OU qty < 20).
+  -> db.inventory.find({
+    and: [
+      { price: { $gt: 0.99, $lt: 1.99 } },
+      {
+        or: [
+          { sale : true },
+          { qty : { $lt : 20 } }
+        ]
+      }
+    ]
+  });
+
