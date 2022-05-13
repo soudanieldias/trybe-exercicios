@@ -1,0 +1,98 @@
+// Exercício 01: Inspecione um documento para que você se familiarize com a estrutura.
+// Entenda os atributos e os níveis existentes.
+  -> use class;
+  -> db.duperheroes.findOne();
+
+// Exercício 02: 🚀 Selecione todos os super-heróis com menos de 1.80m de altura. Lembre-se de que essa informação está em centímetros.
+  -> use class;
+  -> db.superheroes.find({ "aspects.height": { $lt: 180 } });
+  
+
+// Exercício 03: 🚀 Retorne o total de super-heróis menores que 1.80m.
+  -> use class;
+  -> db.superheroes.find({ "aspects.height": { $lt: 180 } }).count();
+  => RETORNO: 421;
+
+// Exercício 04: Retorne o total de super-heróis com até 1.80m.
+  -> use class;
+  -> db.superheroes.find({ "aspects.height": { $lte: 180 } }).count();
+  => RETORNO: 459;
+
+// Exercício 05: Selecione um super-herói com 2.00m ou mais de altura.
+  -> use class;
+  -> db.superheroes.findOne({ "aspects.height": { $gte: 200 } });
+  => RETORNO: {
+  _id: ObjectId("627e89f33d29d4c30ea7955a"),
+  name: 'Abomination',
+  alignment: 'bad',
+  gender: 'Male',
+  race: 'Human / Radiation',
+  aspects: { eyeColor: 'green', hairColor: 'No Hair', height: 203, weight: 200 },
+  publisher: 'Marvel Comics'
+};
+
+// Exercício 06: Retorne o total de super-heróis com 2.00m ou mais.
+  -> use class;
+  -> db.superheroes.find({ "aspects.height": { $gte: 200 } }).count();
+  => RETORNO: 59;
+
+// Exercício 07: Selecione todos os super-heróis que têm olhos verdes.
+  -> use class;
+  -> db.superheroes.find({ "aspects.eyeColor": "green" }).count();
+  => RETORNO: 73;
+
+// Exercício 08: Retorne o total de super-heróis com olhos azuis.
+  -> use class;
+  -> db.superheroes.find({ "aspects.eyeColor": "blue" }).count();
+  => RETORNO: 225;
+
+// Exercício 09: 🚀 Utilizando o operador $in, selecione todos os super-heróis com cabelos pretos ou carecas ("No Hair").
+  -> use class;
+  -> db.superheroes.find({ "aspects.hairColor": { $in: ["No Hair", "Black"]} });
+  => RETORNO: {
+    ... // OBJETO GRANDE (233 Resultados)
+  };
+
+// Exercício 10: Retorne o total de super-heróis com cabelos pretos ou carecas ("No Hair").
+  -> use class;
+  -> db.superheroes.find({ "aspects.hairColor": { $in: ["No Hair", "Black"]} }).count();
+  => RETORNO: 233;
+
+// Exercício 11: Retorne o total de super-heróis que não tenham cabelos pretos ou não sejam carecas.
+  -> use class;
+  -> db.superheroes.find({ "aspects.hairColor": { $nin: ["No Hair", "Black"]} }).count();
+  => RETORNO: 501;
+
+// Exercício 12: 🚀 Utilizando o operador $not, retorne o total de super-heróis que não tenham mais de 1.80m de altura.
+  -> use class;
+  -> db.superheroes.find({ "aspects.height": { $not: { $gt: 180 } }}).count();
+  => RETORNO: 459;
+
+// Exercício 13: Selecione todos os super-heróis que não sejam humanos nem sejam maiores do que 1.80m.
+  -> use class;
+  -> db.superheroes.find({ $and: [{ "aspects.race": { $ne: "Human / Radiation" }}, { "aspects.height": { $not: { $gt: 180 } }}] }).count();
+  => RETORNO: 459;
+
+// Exercício 14: Selecione todos os super-heróis com 1.80m ou 2.00m de altura e que sejam publicados pela Marvel Comics.
+  -> use class;
+  -> db.superheroes.find({ $and: [{ $or: [{ "aspects.height": 180 }, { "aspects.height": 200 }] }, { "publisher": "Marvel Comics" }]} );
+
+// Exercício 15: Selecione todos os super-heróis que pesem entre 80kg e 100kg, sejam Humanos ou Mutantes e não sejam publicados pela DC Comics.
+  -> use class;
+  -> db.superheroes.find({ $and: [ {"aspects.weight": { $gte: 80, $lte: 100 }},{$or: [{ race: "Human" }, { race: "Mutant" }]},{ publisher: { $ne: "DC Comics" }}]}).pretty();
+
+// Exercício 16: Retorne o total de documentos que não contêm o campo race.
+  -> use class;
+  -> db.superheroes.find({ race: { $exists: false } }).count();
+
+// Exercício 17: Retorne o total de documentos que contêm o campo hairColor.
+  -> use class;
+  -> db.superheroes.find({ "aspects.hairColor": { $exists: true } }).count();
+
+// Exercício 18: Remova apenas um documento publicado pela Sony Pictures.
+  -> use class;
+  -> db.superheroes.deleteOne({ publisher: "Sony Pictures" }).count();
+
+// Exercício 19: 🚀 Remova todos os documentos publicados pelo George Lucas.
+  -> use class;
+  -> db.superheroes.deleteMany({ "publisher": "George Lucas" });

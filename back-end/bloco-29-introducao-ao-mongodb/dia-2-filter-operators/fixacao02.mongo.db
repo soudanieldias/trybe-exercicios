@@ -31,4 +31,5 @@
 // (rating > 6 || rating < 10) && ( (borough === 'Brooklyn') || !cuisine === 'Delicatessen' )
   -> use test;
   -> db.restaurants.find({ $and: [{ "rating": { $in: [7, 8, 9] } }, { $or: [{ "borough": "Brooklyn"}, { "cuisine": { $ne: "Delicatessen" }}] } ] } ).count();
+  -> db.restaurants.find({ $and: [{ $and: [{"rating": { $lt: 6 }}, {"rating": { $gt: 10 }}]}, { $or: [{ "borough": "Brooklyn"}, { "cuisine": { $ne: "Delicatessen" }}] } ] } ).count();
   => RETORNO: 6
