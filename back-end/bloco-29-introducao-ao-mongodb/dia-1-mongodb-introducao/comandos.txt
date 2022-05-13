@@ -1,0 +1,17 @@
+# Cria um Banco de Dados, ou usa um já criado:
+  -> use DATABASE_NAME; // DATABASE_NAME é o nome do banco de dados em uso
+  -> db; // Mostra o banco que está em uso atualmente
+
+Listar as DB's Existentes no MongoDB:
+  -> show dbs;
+
+Dropar uma DB Existente:
+  -> use mydb;
+  -> db.dropDatabase();
+
+Inserir um dado na tabela do Banco:
+  -> db.users.insert({ id: 1 }); // users é o nome da coleção onde o dado é inserido (Tabela da DB Selecionada)
+// Insira na tabela users do Banco selecionado um objeto com id = 1;
+
+Criar uma coleção à partir do Import de um arquivo JSON [INFO: COMANDO VIA TERMINAL]
+  -> mongoimport --jsonArray --db booksDB --collection books --file books.json
